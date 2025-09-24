@@ -2,29 +2,44 @@
   background-color: var(--background-light);
   color: var(--text-dark);
   min-height: 100vh;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
-  font-size: 1.5rem;
+  position: sticky;
+  top: 0;
+  background-color: rgba(var(--background-light-rgb), 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.headerTitle {
+  font-size: 1.25rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+}
+
+.main {
+  padding: 1rem;
 }
 
 .card {
-  background-color: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .cardTitle {
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: medium;
 }
 
 .cardSubtitle {

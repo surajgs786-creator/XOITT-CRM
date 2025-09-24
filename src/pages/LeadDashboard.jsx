@@ -4,40 +4,21 @@ import styles from "./LeadDashboard.module.css";
 const LeadDashboard = () => {
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <h1 className={styles.headerTitle}>Leads</h1>
-        <div className="flex items-center gap-2">
-          <button className="flex h-10 w-10 items-center justify-center rounded-full text-slate-600">
-            <span className="material-symbols-outlined">call</span>
-          </button>
-          <button className="flex h-10 w-10 items-center justify-center rounded-full text-slate-600">
-            <span className="material-symbols-outlined">add</span>
-          </button>
+      <h1 className={styles.header}>Lead Dashboard</h1>
+      <div className={styles.card}>
+        <div>
+          <p className={styles.cardTitle}>Client A</p>
+          <p className={styles.cardSubtitle}>Needs consultation</p>
         </div>
-      </header>
-      <main className={styles.main}>
-        <div className={styles.card}>
-          <div>
-            <p className={styles.cardTitle}>John Doe</p>
-            <p className={styles.cardSubtitle}>Interested in HVAC systems</p>
-          </div>
-          <span className={styles.cardBadge}>New</span>
+        <span className={styles.cardBadge}>Pending</span>
+      </div>
+      <div className={styles.card}>
+        <div>
+          <p className={styles.cardTitle}>Client B</p>
+          <p className={styles.cardSubtitle}>Proposal sent</p>
         </div>
-        <div className={styles.card}>
-          <div>
-            <p className={styles.cardTitle}>Jane Smith</p>
-            <p className={styles.cardSubtitle}>Follow-up on plumbing project</p>
-          </div>
-          <span className={styles.cardBadge}>In Progress</span>
-        </div>
-        <div className={styles.card}>
-          <div>
-            <p className={styles.cardTitle}>Ethan Carter</p>
-            <p className={styles.cardSubtitle}>Proposal sent for renovation</p>
-          </div>
-          <span className={styles.cardBadge}>Proposal Sent</span>
-        </div>
-      </main>
+        <span className={styles.cardBadge}>Proposal Sent</span>
+      </div>
     </div>
   );
 };
