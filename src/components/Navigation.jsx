@@ -9,7 +9,7 @@ const navLinks = [
   { to: "/leads", icon: faTasks, label: "Leads" },
   { to: "/tasks", icon: faTasks, label: "Tasks" },
   { to: "/contacts", icon: faUser, label: "Contacts" },
-  { to: "/after-sales", icon: faHeadset, label: "Support" }
+  { to: "/after-sales", icon: faHeadset, label: "Sales" }
 ];
 
 const Navigation = () => {

@@ -33,7 +33,7 @@ const Footer = () => {
           to="/after-sales"
         >
           <FontAwesomeIcon icon={faHeadset} className="text-lg" />
-          <span className="text-xs font-medium">Support</span>
+          <span className="text-xs font-medium">Sales</span>
         </Link>
       </nav>
     </footer>
