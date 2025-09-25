@@ -26,6 +26,7 @@ export const DashboardStatsData: DashboardStatType[] = [
     bgColor: "bg-gradient-success",
     textColor: "text-success-emphasis",
     bottomValue: "2",
+    amount: "$24,895",
     description: "Completed",
   },
   {
@@ -36,6 +37,7 @@ export const DashboardStatsData: DashboardStatType[] = [
     bgColor: " bg-gradient-info",
     textColor: "text-info-emphasis",
     bottomValue: "28",
+    amount: "$8,650",
     description: "Completed",
   },
   {
@@ -46,6 +48,7 @@ export const DashboardStatsData: DashboardStatType[] = [
     bgColor: "bg-gradient-success",
     textColor: "text-danger-emphasis",
     bottomValue: "2",
+    amount: "$12,000",
     description: "Completed",
   },
   {
@@ -56,6 +59,7 @@ export const DashboardStatsData: DashboardStatType[] = [
     bgColor: "bg-gradient-warning",
     textColor: "text-warning-emphasis",
     bottomValue: "26%",
+    amount: "$8,500",
     description: "Increased",
   },
 ];

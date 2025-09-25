@@ -13,7 +13,7 @@ const ActivityLog = () => {
           <h5 className="mb-0">Activity Log</h5>
         </div>
         <div className="d-flex flex-column gap-5 mb-6">
-          {activityLog.map((item, index) => (
+          {activityLog.slice(0, 5).map((item, index) => (
             <div
               key={index}
               className="timeline-vertical timeline-vertical-height"

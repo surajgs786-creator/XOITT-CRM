@@ -9,14 +9,14 @@ import CustomProgressBar from "components/common/CustomProgressBar";
 
 const TaskProgress = () => {
   return (
-    <Card className="card-lg mb-6">
-      <CardBody>
+    <Card className="card-lg mb-6" style={{ minHeight: 420 }}>
+      <CardBody className="d-flex flex-column h-100">
         <div className="mb-4">
           <h5 className="mb-0">Activities</h5>
         </div>
         <div className="fs-1 fw-bold mb-3">64%</div>
         <div className="d-flex align-items-center gap-1 w-100 mb-4">
-          <div className="w-25">
+          <div className="w-20">
             <DasherTippy content="Completed">
               <CustomProgressBar
                 className="mb-2"
@@ -27,7 +27,7 @@ const TaskProgress = () => {
             </DasherTippy>
             24%
           </div>
-          <div className="w-50">
+          <div className="w-25">
             <DasherTippy content="In Progress">
               <CustomProgressBar
                 className="mb-2"
@@ -36,9 +36,9 @@ const TaskProgress = () => {
                 variant="success-light"
               />
             </DasherTippy>
-            35%
+            20%
           </div>
-          <div className="w-75">
+          <div className="w-25">
             <DasherTippy content="Up Coming">
               <CustomProgressBar
                 className="mb-2"
@@ -47,12 +47,23 @@ const TaskProgress = () => {
                 variant="danger-light"
               />
             </DasherTippy>
-            41%
+            21%
+          </div>
+          <div className="w-30">
+            <DasherTippy content="Urgent">
+              <CustomProgressBar
+                className="mb-2"
+                now={100}
+                style={{ height: "3px" }}
+                variant="warning-light"
+              />
+            </DasherTippy>
+            35%
           </div>
         </div>
         <div className="bg-gray-100 p-3 rounded-4">
           <Row className="g-3">
-            <Col md={4}>
+            <Col md={3}>
               <Card className="card-lg">
                 <CardBody className="text-center p-3">
                   <div className="icon-shape icon-lg bg-info-subtle text-info-emphasis rounded-pill">
@@ -65,7 +76,7 @@ const TaskProgress = () => {
                 </CardBody>
               </Card>
             </Col>
-            <Col md={4}>
+            <Col md={3}>
               <Card className="card-lg">
                 <CardBody className="text-center p-3">
                   <div className="icon-shape icon-lg bg-success-subtle text-success-emphasis rounded-pill">
@@ -78,7 +89,7 @@ const TaskProgress = () => {
                 </CardBody>
               </Card>
             </Col>
-            <Col md={4}>
+            <Col md={3}>
               <Card className="card-lg">
                 <CardBody className="text-center p-3">
                   <div className="icon-shape icon-lg bg-danger-subtle text-danger-emphasis rounded-pill">
@@ -87,6 +98,19 @@ const TaskProgress = () => {
                   <div className="lh-1 mt-4">
                     <div className="fs-4 fw-bold mb-1">14</div>
                     <div className="text-secondary small">Up Coming</div>
+                  </div>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col md={3}>
+              <Card className="card-lg">
+                <CardBody className="text-center p-3">
+                  <div className="icon-shape icon-lg bg-warning-subtle text-warning-emphasis rounded-pill">
+                    <IconCircleDashedCheck size={20} />
+                  </div>
+                  <div className="lh-1 mt-4">
+                    <div className="fs-4 fw-bold mb-1">18</div>
+                    <div className="text-secondary small">Urgent</div>
                   </div>
                 </CardBody>
               </Card>

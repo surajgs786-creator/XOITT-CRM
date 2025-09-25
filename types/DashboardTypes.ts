@@ -6,6 +6,7 @@ export type DashboardStatType = {
   bgColor: string;
   textColor: string;
   bottomValue: string;
+  amount: string;
   description: string;
 };
 

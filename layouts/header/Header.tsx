@@ -73,14 +73,6 @@ const Header = () => {
             as={"ul"}
             className="d-flex align-items-center mb-0 gap-2"
           >
-            <ListGroup.Item as="li">
-              <Button variant="white">
-                <span>
-                  <IconSearch size={16} />
-                </span>
-                <small className="ms-1">⌘K</small>
-              </Button>
-            </ListGroup.Item>
 
             <ListGroup.Item as="li">
               <Button

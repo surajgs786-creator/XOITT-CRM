@@ -25,6 +25,11 @@ const DashboardStats = () => {
                   </span>
                   <span className="text-secondary">{stat.description}</span>
                 </p>
+                <p className="mb-0">
+                  <span className={`me-1 ${stat.textColor}`}>
+                    {stat.amount}
+                  </span>
+                </p>
               </div>
             </CardBody>
           </Card>
