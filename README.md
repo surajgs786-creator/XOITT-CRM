@@ -1,16 +1,29 @@
-# React + Vite
+# Dasher UI - Minimal Next.js Admin Dashboard Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### Preview
 
-Currently, two official plugins are available:
+- [Demo](https://themewagon.github.io/dasher-ui/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### Download
 
-## React Compiler
+- [Download from ThemeWagon](https://themewagon.com/themes/dasher-ui/)
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting Started
 
-## Expanding the ESLint configuration
+1. Clone Repository
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+git clone https://github.com/themewagon/dasher-ui.git
+```
+
+## Author
+
+```
+Design and code is completely written by codescandy design and development team.
+```
+
+## License
+
+- Design and Code is Copyright &copy; [@Codescandy](https://codescandy.com/)
+- Licensed cover under [MIT]
+- Distributed by [ThemeWagon](https://themewagon.com)
