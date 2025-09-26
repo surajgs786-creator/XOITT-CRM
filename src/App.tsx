@@ -3,26 +3,28 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DashboardPage from './pages/dashboard';
 import './App.scss';
 import Sidebar from './layouts/Sidebar';
-import Flex from './components/common/Flex';
-import {Layout} from 'antd';
+import Header from './layouts/header/Header';
+import { Provider } from 'react-redux';
+import store from './store/store';
+
 function App() {
   return (
-    <Layout style={{ minHeight: '100vh' }}>
-   
-    <Router>
-    <Sidebar hideLogo={false} containerId="miniSidebar" />
-     <Routes>
-       <Route path="/dashboard" element={<DashboardPage />} />
-       {/* Add more routes here */}
-       <Route path="/" element={<DashboardPage/>} />
-     </Routes>
-     
-   </Router>
-    </Layout>
-
-
-   
-    
+    <Provider store={store}>
+      <Router>
+        <div className="d-flex flex-column min-vh-100">
+          <Header />
+          <div className="d-flex flex-fill">
+            <Sidebar hideLogo={false} containerId="miniSidebar" />
+            <main className="flex-fill">
+              <Routes>
+                <Route path="/dashboard" element={<DashboardPage />} />
+                <Route path="/" element={<DashboardPage/>} />
+              </Routes>
+            </main>
+          </div>
+        </div>
+      </Router>
+    </Provider>
   );
 }
 

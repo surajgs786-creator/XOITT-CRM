@@ -24,7 +24,7 @@ import React, { ReactNode } from 'react';
 
 // import custom components
 import DasherTippy from './DasherTippy';
-import { getAssetPath } from 'src/helper/assetPath';
+import { getAssetPath } from '../../helper/assetPath';
 
 type AvatarSize = 'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
 type AvatarType = 'image' | 'initial';

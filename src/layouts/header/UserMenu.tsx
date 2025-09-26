@@ -1,15 +1,14 @@
 //import node modules libraries
 import React from 'react';
 import { Dropdown, Image } from 'react-bootstrap';
-import Link from 'next/link';
 import { IconLogin2 } from '@tabler/icons-react';
 
 //import routes files
-import { UserMenuItem } from 'src/routes/HeaderRoute';
+import { UserMenuItem } from '../../routes/HeaderRoute';
 
 //import custom components
-import { Avatar } from 'src/components/common/Avatar';
-import { getAssetPath } from 'src/helper/assetPath';
+import { Avatar } from '../../components/common/Avatar';
+import { getAssetPath } from '../../helper/assetPath';
 
 interface UserToggleProps {
   children?: React.ReactNode;
@@ -17,9 +16,9 @@ interface UserToggleProps {
 }
 const CustomToggle = React.forwardRef<HTMLAnchorElement, UserToggleProps>(
   ({ children, onClick }, ref) => (
-    <Link ref={ref} href="#" onClick={onClick}>
+    <a ref={ref} href="#" onClick={onClick} style={{ textDecoration: 'none' }}>
       {children}
-    </Link>
+    </a>
   ),
 );
 CustomToggle.displayName = 'CustomToggle';
@@ -59,15 +58,19 @@ const UserMenu = () => {
           ))}
         </div>
         <div className="border-dashed border-top mb-4 pt-4 px-6">
-          <Link
-            href=""
-            className="text-secondary d-flex align-items-center gap-2"
+          <button
+            type="button"
+            className="btn btn-link text-secondary d-flex align-items-center gap-2 p-0 text-decoration-none"
+            onClick={() => {
+              // Handle logout logic here
+              console.log('Logout clicked');
+            }}
           >
             <span>
               <IconLogin2 size={20} strokeWidth={1.5} />
             </span>
             <span>Logout</span>
-          </Link>
+          </button>
         </div>
       </Dropdown.Menu>
     </Dropdown>

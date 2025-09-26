@@ -1,17 +1,12 @@
-'use client';
 //import node modules libraries
-import { Image } from 'react-bootstrap';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import OffcanvasBody from 'react-bootstrap/OffcanvasBody';
-import OffcanvasHeader from 'react-bootstrap/OffcanvasHeader';
-import Link from 'next/link';
+import { Image, Offcanvas } from 'react-bootstrap';
 
 //import custom components
 import Sidebar from './Sidebar';
 
 //import custom hooks
-import useMenu from 'src/hooks/useMenu';
-import { getAssetPath } from 'src/helper/assetPath';
+import useMenu from '../hooks/useMenu';
+import { getAssetPath } from '../helper/assetPath';
 
 const OffcanvasSidebar = () => {
   const { showMenu, toggleMenuHandler } = useMenu();
@@ -22,20 +17,20 @@ const OffcanvasSidebar = () => {
       show={showMenu}
       onHide={() => toggleMenuHandler(false)}
       backdrop={true}
-      bsPrefix="offcanvasNav offcanvas offcanvas-start "
+      className="offcanvasNav offcanvas-start"
     >
-      <OffcanvasHeader closeButton>
-        <Link href="/" className="d-flex align-items-center gap-2">
+      <Offcanvas.Header closeButton>
+        <div className="d-flex align-items-center gap-2">
           <Image
             src={getAssetPath('/images/brand/logo/logo-icon.svg')}
             alt=""
           />
-          <span className="fw-bold fs-4  site-logo-text">Dasher</span>
-        </Link>
-      </OffcanvasHeader>
-      <OffcanvasBody className="p-0 ">
+          <span className="fw-bold fs-4 site-logo-text">Dasher</span>
+        </div>
+      </Offcanvas.Header>
+      <Offcanvas.Body className="p-0">
         <Sidebar hideLogo />
-      </OffcanvasBody>
+      </Offcanvas.Body>
     </Offcanvas>
   );
 };

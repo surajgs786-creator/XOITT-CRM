@@ -2,7 +2,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // import app config file
-import { settings } from 'app.config';
+import { settings } from '../../../app.config';
 
 export type MenuToggleType = 'expanded' | 'collapsed';
 

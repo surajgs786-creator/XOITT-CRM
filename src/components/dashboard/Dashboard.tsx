@@ -1,12 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import DashboardStats from './DashboardStats/DashboardStats';
-import TaskProgress from './TaskProgress/TaskProgress';
-import ActiveProject from './ActiveProject/ActiveProject';
-import UpcomingMeetingSlider from './UpcomingMeetingSlider/UpcomingMeetingSlider';
-import ActivityLog from './ActivityLog/ActivityLog';
-import TaskList from './TaskList/TaskList';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row, Spinner } from 'react-bootstrap';
 import './dashboard.scss';
+
+// Lazy load heavy components that use Chart.js and Swiper
+const TaskProgress = lazy(() => import('./TaskProgress/TaskProgress'));
+const ActiveProject = lazy(() => import('./ActiveProject/ActiveProject'));
+const UpcomingMeetingSlider = lazy(() => import('./UpcomingMeetingSlider/UpcomingMeetingSlider'));
+const ActivityLog = lazy(() => import('./ActivityLog/ActivityLog'));
+const TaskList = lazy(() => import('./TaskList/TaskList'));
+
+// Loading component
+const LoadingSpinner = () => (
+  <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '200px' }}>
+    <Spinner animation="border" role="status" size="sm">
+      <span className="visually-hidden">Loading...</span>
+    </Spinner>
+  </div>
+);
 
 const Dashboard: React.FC = () => {
   const [showData, setShowData] = useState(false);
@@ -57,26 +68,36 @@ const Dashboard: React.FC = () => {
       <Row className="g-6 mb-6">
         <Col xl={5} style={{ display: 'flex', flexDirection: 'column', maxHeight: 600 }}>
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'stretch' }}>
-            <TaskProgress />
+            <Suspense fallback={<LoadingSpinner />}>
+              <TaskProgress />
+            </Suspense>
           </div>
         </Col>
         <Col xl={4} style={{ display: 'flex', flexDirection: 'column', maxHeight: 600 }}>
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'stretch' }}>
-            <ActiveProject />
+            <Suspense fallback={<LoadingSpinner />}>
+              <ActiveProject />
+            </Suspense>
           </div>
         </Col>
         <Col xl={3} style={{ display: 'flex', flexDirection: 'column', maxHeight: 600 }}>
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'stretch' }}>
-            <UpcomingMeetingSlider />
+            <Suspense fallback={<LoadingSpinner />}>
+              <UpcomingMeetingSlider />
+            </Suspense>
           </div>
         </Col>
       </Row>
       <Row className="g-6 mb-6">
         <Col xl={6}>
-          <ActivityLog />
+          <Suspense fallback={<LoadingSpinner />}>
+            <ActivityLog />
+          </Suspense>
         </Col>
         <Col xl={6}>
-          <TaskList />
+          <Suspense fallback={<LoadingSpinner />}>
+            <TaskList />
+          </Suspense>
         </Col>
       </Row>
     </>

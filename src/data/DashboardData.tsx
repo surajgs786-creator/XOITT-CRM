@@ -5,7 +5,10 @@ import {
   IconSnowboarding,
   IconUsers,
 } from '@tabler/icons-react';
-import { v4 as uuid } from 'uuid';
+
+// Simple ID generator to replace heavy UUID library
+let idCounter = 0;
+const generateId = () => `id_${++idCounter}_${Date.now()}`;
 
 //import custom types
 import {
@@ -19,7 +22,7 @@ import {
 
 export const DashboardStatsData: DashboardStatType[] = [
   {
-    id: uuid(),
+    id: generateId(),
     title: 'Leads',
     value: '6',
     icon: <IconBriefcase size={24} strokeWidth={1.5} />,
@@ -30,7 +33,7 @@ export const DashboardStatsData: DashboardStatType[] = [
     description: 'Completed',
   },
   {
-    id: uuid(),
+    id: generateId(),
     title: 'Enquiries',
     value: '132',
     icon: <IconListCheck size={24} strokeWidth={1.5} />,
@@ -41,7 +44,7 @@ export const DashboardStatsData: DashboardStatType[] = [
     description: 'Completed',
   },
   {
-    id: uuid(),
+    id: generateId(),
     title: 'Proposals',
     value: '8',
     icon: <IconUsers size={24} strokeWidth={1.5} />,
@@ -52,7 +55,7 @@ export const DashboardStatsData: DashboardStatType[] = [
     description: 'Completed',
   },
   {
-    id: uuid(),
+    id: generateId(),
     title: 'Orders',
     value: '76%',
     icon: <IconSnowboarding size={24} strokeWidth={1.5} />,
