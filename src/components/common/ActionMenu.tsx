@@ -1,4 +1,3 @@
-'use client';
 /***************************
 Component : ActionMenu
 ****************************
@@ -18,9 +17,9 @@ Note: If you have specified both menuItems and children parameters, menuItems wi
 */
 
 // import node module libraries
-import Link from 'next/link';
 import React, { Fragment } from 'react';
 import { Dropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom'; // Updated for react-router-dom
 
 interface CustomToggleProps {
   children: React.ReactNode;
@@ -56,7 +55,7 @@ const ActionMenu: React.FC<ActionMenuProps> = ({
     ({ children, onClick }, ref) => (
       <Link
         ref={ref}
-        href="#"
+        to="#" // Updated href to to for react-router-dom
         onClick={(e) => {
           e.preventDefault();
           onClick(e);
@@ -80,8 +79,8 @@ const ActionMenu: React.FC<ActionMenuProps> = ({
           menuItems.map((item, index) => (
             <Dropdown.Item
               key={index}
-              as={Link}
-              href={item.link}
+              as={Link} // Updated for react-router-dom
+              to={item.link} // Updated href to to for react-router-dom
               className={itemClass}
               onClick={onClick}
             >

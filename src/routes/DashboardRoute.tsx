@@ -11,7 +11,7 @@ import {
 } from '@tabler/icons-react';
 
 //import custom type
-import { MenuItemType } from 'src/types/menuTypes';
+import { MenuItemType } from '../types/menuTypes';
 
 export const DashboardMenu: MenuItemType[] = [
   {

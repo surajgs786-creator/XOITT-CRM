@@ -15,7 +15,7 @@ import {
   ProjectType,
   Task,
   TeamsProps,
-} from 'src/types/DashboardTypes';
+} from 'DashboardTypes';
 
 export const DashboardStatsData: DashboardStatType[] = [
   {

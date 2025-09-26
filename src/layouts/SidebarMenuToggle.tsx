@@ -1,7 +1,7 @@
-//import node modules libraries
+// Import node module libraries
 import { useContext, ReactNode } from 'react';
 import { AccordionContext, useAccordionButton, Nav } from 'react-bootstrap';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 interface CustomToggleProps {
   children: ReactNode;
@@ -27,18 +27,22 @@ export default function CustomToggle({
   );
 
   const isCurrentEventKey = activeEventKey === eventKey;
+
   return (
     <Nav.Item as="li" className="dropdown">
-      <Nav.Link
-        href="#"
-        onClick={decoratedOnClick}
+      <Link
+        to="#"
+        onClick={(e) => {
+          e.preventDefault(); // Prevent default link behavior
+          decoratedOnClick();
+        }}
+        className={`dropdown-toggle ${isCurrentEventKey ? 'active' : ''}`}
         data-bs-toggle="dropdown"
-        aria-expanded={isCurrentEventKey ? true : false}
-        className="dropdown-toggle"
+        aria-expanded={isCurrentEventKey}
       >
         <span className="nav-icon">{icon}</span>
         <span className="text">{children}</span>
-      </Nav.Link>
+      </Link>
     </Nav.Item>
   );
 }
@@ -57,9 +61,12 @@ export function CustomToggleLevel2({
 
   return (
     <Link
-      href={href}
-      className={className}
-      onClick={decoratedOnClick}
+      to={href}
+      className={`${className} ${isCurrentEventKey ? 'active' : ''}`}
+      onClick={(e) => {
+        e.preventDefault(); // Prevent default link behavior
+        decoratedOnClick(e);
+      }}
       data-bs-toggle="collapse"
       data-bs-target={dataBsTarget}
       aria-expanded={isCurrentEventKey}

@@ -1,18 +1,14 @@
-'use client';
 // import node module libraries
 import { Container, Row, Col, Breadcrumb } from 'react-bootstrap';
-
-// import required hooks
-import { usePathname } from 'next/navigation';
-import { useRouter } from 'next/navigation';
+import { useLocation, useNavigate } from 'react-router-dom'; // Updated for react-router-dom
 
 // import helper utility file
-import { capitalizedWord } from 'src/helper/utils';
+import { capitalizedWord } from '../../helper/utils';
 
 const DasherBreadcrumb = () => {
-  const path = usePathname();
-  const router = useRouter();
-  const pathSegments = path.split('/').filter((segment) => segment !== '');
+  const location = useLocation(); // Get the current path
+  const navigate = useNavigate(); // For navigation
+  const pathSegments = location.pathname.split('/').filter((segment) => segment !== '');
 
   return (
     <div className="mt-4">
@@ -20,7 +16,7 @@ const DasherBreadcrumb = () => {
         <Row>
           <Col>
             <Breadcrumb className="mb-0">
-              <Breadcrumb.Item onClick={() => router.push('/')}>
+              <Breadcrumb.Item onClick={() => navigate('/')}>
                 Home
               </Breadcrumb.Item>
               {pathSegments.map((segment, index) =>
@@ -37,10 +33,9 @@ const DasherBreadcrumb = () => {
                   <Breadcrumb.Item as="li" key={segment}>
                     <span
                       onClick={() =>
-                        router.push(
-                          `/${pathSegments.slice(0, index + 1).join('/')}`,
-                        )
+                        navigate(`/${pathSegments.slice(0, index + 1).join('/')}`)
                       }
+                      style={{ cursor: 'pointer' }}
                     >
                       {capitalizedWord(segment)}
                     </span>

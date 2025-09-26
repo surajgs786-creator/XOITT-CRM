@@ -1,7 +1,7 @@
-'use client';
-//import node module libraries
+
+
+// Import node module libraries
 import React, { Fragment, useState } from 'react';
-import Link from 'next/link';
 import { useMediaQuery } from 'react-responsive';
 import {
   IconArrowBarLeft,
@@ -11,14 +11,15 @@ import {
 } from '@tabler/icons-react';
 import { Container, ListGroup, Navbar, Button } from 'react-bootstrap';
 
-//import custom components
+// Import custom components
 import UserMenu from './UserMenu';
-import Flex from 'src/components/common/Flex';
-import NoficationList from 'src/components/common/NoficationList';
-import OffcanvasSidebar from 'src/layouts/OffcanvasSidebar';
+import Flex from '../../components/common/Flex';
+import NoficationList from '../../components/common/NoficationList';
+import OffcanvasSidebar from '../../layouts/OffcanvasSidebar';
 
-//import custom hooks
-import useMenu from 'src/hooks/useMenu';
+// Import custom hooks
+import useMenu from '../../hooks/useMenu';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isNoficationOpen, setIsNotificationOpen] = useState<boolean>(false);
@@ -42,7 +43,7 @@ const Header = () => {
             )}
             {isTablet || (
               <div>
-                <Link href={'#'} className="sidebar-toggle d-flex p-3">
+                <Link to={'#'} className="sidebar-toggle d-flex p-3">
                   <span
                     className="collapse-mini"
                     onClick={() => handleCollapsed('expanded')}

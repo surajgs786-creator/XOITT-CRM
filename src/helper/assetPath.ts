@@ -1,4 +1,4 @@
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const BASE_PATH = import.meta.env.VITE_BASE_PATH || '';
 
 export const getAssetPath = (src: string | undefined) => {
   if (!src) return '';

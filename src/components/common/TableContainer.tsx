@@ -10,8 +10,8 @@ import {
 } from 'react-bootstrap';
 
 //import custom components
-import Flex from 'src/components/common/Flex';
-import TanstackTable from 'src/components/table/TanstackTable';
+import Flex from '../common/Flex';
+import TanstackTable from '../table/TanstackTable';
 
 //import required data files
 interface TableContainerProps {

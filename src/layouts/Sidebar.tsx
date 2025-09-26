@@ -1,41 +1,39 @@
-'use client';
-//import node module libraries
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+// Import node module libraries
 import React, { Fragment } from 'react';
+import { useLocation, Link } from 'react-router-dom';
 import {
   Accordion,
   Badge,
   Image,
   ListGroup,
   Nav,
-  NavItem,
 } from 'react-bootstrap';
 
-//import custom types
-import { MenuItemType } from 'src/types/menuTypes';
+// Import custom types
+import { MenuItemType } from '../types/menuTypes';
 
-//import custom components
-import { Avatar } from 'src/components/common/Avatar';
+// Import custom components
+import { Avatar } from '../components/common/Avatar';
 import CustomToggle, { CustomToggleLevel2 } from './SidebarMenuToggle';
 
-// import required routes
-import { getAssetPath } from 'src/helper/assetPath';
-import { DashboardMenu } from 'src/routes/DashboardRoute';
+// Import required routes
+import { getAssetPath } from '../helper/assetPath';
+import { DashboardMenu } from '../routes/DashboardRoute';
 
 interface SidebarProps {
   hideLogo: boolean;
   containerId?: string;
 }
-const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
-  const location = usePathname();
 
-  //Generate Link
+const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
+  const location = useLocation(); // React Router's hook to get the current path
+
+  // Generate Link
   const generateLink = (item: MenuItemType) => {
     return (
       <Link
-        href={`${item.link}`}
-        className={`nav-link ${location === `/${item.link}` ? 'active' : ''}`}
+        to={`${item.link}`}
+        className={`nav-link ${location.pathname === `/${item.link}` ? 'active' : ''}`}
       >
         <span className="text">{item.name}</span>
         {item.badge && (
@@ -56,7 +54,7 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
         {hideLogo || (
           <div className="brand-logo">
             <Link
-              href="/"
+              to="/"
               className="d-none d-md-flex align-items-center gap-2"
             >
               <Image
@@ -102,7 +100,7 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                                   bsPrefix="nav-item"
                                   key={menuLevel1Index}
                                 >
-                                  {/* first level menu started  */}
+                                  {/* First level menu started */}
                                   <Accordion
                                     defaultActiveKey="0"
                                     bsPrefix="navbar-nav flex-column"
@@ -119,7 +117,7 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                                         bsPrefix=""
                                         className="nav flex-column"
                                       >
-                                        {/* second level menu started  */}
+                                        {/* Second level menu started */}
                                         {menuLevel1Item.children.map(
                                           function (
                                             menuLevel2Item,
@@ -132,7 +130,7 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                                                   bsPrefix="nav-item"
                                                   key={menuLevel2Index}
                                                 >
-                                                  {/* second level accordion menu started  */}
+                                                  {/* Second level accordion menu started */}
                                                   <Accordion
                                                     defaultActiveKey="0"
                                                     className="navbar-nav flex-column"
@@ -151,7 +149,7 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                                                         bsPrefix=""
                                                         className="nav flex-column"
                                                       >
-                                                        {/* third level menu started  */}
+                                                        {/* Third level menu started */}
                                                         {menuLevel2Item.children.map(
                                                           function (
                                                             menuLevel3Item,
@@ -166,12 +164,12 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                                                                 bsPrefix="nav-item"
                                                               >
                                                                 <Link
-                                                                  href={
+                                                                  to={
                                                                     menuLevel3Item.link?.toString() ||
                                                                     `/${menuLevel3Item.link}`
                                                                   }
                                                                   className={`nav-link ${
-                                                                    location ===
+                                                                    location.pathname ===
                                                                     `/${menuLevel3Item.link}`
                                                                       ? 'active'
                                                                       : ''
@@ -185,11 +183,11 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                                                             );
                                                           },
                                                         )}
-                                                        {/* end of third level menu  */}
+                                                        {/* End of third level menu */}
                                                       </ListGroup>
                                                     </Accordion.Collapse>
                                                   </Accordion>
-                                                  {/* end of second level accordion */}
+                                                  {/* End of second level accordion */}
                                                 </ListGroup.Item>
                                               );
                                             } else {
@@ -205,11 +203,11 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                                             }
                                           },
                                         )}
-                                        {/* end of second level menu  */}
+                                        {/* End of second level menu */}
                                       </ListGroup>
                                     </Accordion.Collapse>
                                   </Accordion>
-                                  {/* end of first level menu */}
+                                  {/* End of first level menu */}
                                 </ListGroup.Item>
                               );
                             } else {
@@ -219,18 +217,18 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                                   bsPrefix="nav-item"
                                   key={menuLevel1Index}
                                 >
-                                  {/* first level menu items */}
+                                  {/* First level menu items */}
                                   <Link
-                                    href={`/${menuLevel1Item?.link}`}
+                                    to={`/${menuLevel1Item?.link}`}
                                     className={`nav-link ${
-                                      location === `/${menuLevel1Item.link}`
+                                      location.pathname === `/${menuLevel1Item.link}`
                                         ? 'active'
                                         : ''
                                     }`}
                                   >
                                     {menuLevel1Item.name}
                                   </Link>
-                                  {/* end of first level menu items */}
+                                  {/* End of first level menu items */}
                                 </ListGroup.Item>
                               );
                             }
@@ -238,16 +236,16 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                         )}
                       </ListGroup>
                     </Accordion.Collapse>
-                    {/* end of main menu / menu level 1 / root items */}
+                    {/* End of main menu / menu level 1 / root items */}
                   </Fragment>
                 );
               } else {
                 return (
                   <Nav.Item as="li" key={index}>
                     <Link
-                      href={menu.link ? `${menu.link}` : '#'}
+                      to={menu.link ? `${menu.link}` : '#'}
                       className={`nav-link ${
-                        location === menu.link ? 'active' : ''
+                        location.pathname === menu.link ? 'active' : ''
                       }`}
                     >
                       <span className="nav-icon">{menu.icon}</span>
