@@ -1,7 +1,8 @@
+"use client";
+
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 type FormData = {
   leadOwner: string;
@@ -39,18 +40,35 @@ const NewLead: React.FC = () => {
     formState: { errors },
   } = useForm<FormData>();
 
-  const onSubmit: SubmitHandler<FormData> = (data) => {
+  const onSubmit: SubmitHandler<FormData> = async (data) => {
     console.log("Form Data Submitted:", data);
-    // Add your form submission logic here
+
+    try {
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        console.log("Lead created successfully!");
+      } else {
+        console.error("Failed to create lead");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
 
   return (
     <Container className="mt-4">
       <h1 className="mb-4">Create Lead</h1>
       <Form onSubmit={handleSubmit(onSubmit)}>
-        {/* Lead Information */}
-        <Row className="mb-4">
-          <Col>
+        <Row>
+          {/* Lead Information */}
+          <Col md={6}>
             <h2 className="h5">Lead Information</h2>
             <Form.Group className="mb-3" controlId="leadOwner">
               <Form.Label>Lead Owner</Form.Label>
@@ -88,12 +106,27 @@ const NewLead: React.FC = () => {
                 <option value="">-None-</option>
               </Form.Select>
             </Form.Group>
+            <Form.Group className="mb-3" controlId="industry">
+              <Form.Label>Industry</Form.Label>
+              <Form.Select {...register("industry")}>
+                <option value="">-None-</option>
+              </Form.Select>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="annualRevenue">
+              <Form.Label>Annual Revenue</Form.Label>
+              <Form.Control type="text" {...register("annualRevenue")} />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="emailOptOut">
+              <Form.Check
+                type="checkbox"
+                label="Email Opt Out"
+                {...register("emailOptOut")}
+              />
+            </Form.Group>
           </Col>
-        </Row>
 
-        {/* Company Information */}
-        <Row className="mb-4">
-          <Col>
+          {/* Company Information */}
+          <Col md={6}>
             <h2 className="h5">Company Information</h2>
             <Form.Group className="mb-3" controlId="company">
               <Form.Label>Company</Form.Label>
@@ -135,11 +168,39 @@ const NewLead: React.FC = () => {
               <Form.Label>Website</Form.Label>
               <Form.Control type="text" {...register("website")} />
             </Form.Group>
+            <Form.Group className="mb-3" controlId="leadStatus">
+              <Form.Label>Lead Status</Form.Label>
+              <Form.Select {...register("leadStatus")}>
+                <option value="">-None-</option>
+              </Form.Select>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="employees">
+              <Form.Label>No. of Employees</Form.Label>
+              <Form.Control type="text" {...register("employees")} />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="rating">
+              <Form.Label>Rating</Form.Label>
+              <Form.Select {...register("rating")}>
+                <option value="">-None-</option>
+              </Form.Select>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="skypeId">
+              <Form.Label>Skype ID</Form.Label>
+              <Form.Control type="text" {...register("skypeId")} />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="secondaryEmail">
+              <Form.Label>Secondary Email</Form.Label>
+              <Form.Control type="email" {...register("secondaryEmail")} />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="twitter">
+              <Form.Label>Twitter</Form.Label>
+              <Form.Control type="text" {...register("twitter")} />
+            </Form.Group>
           </Col>
         </Row>
 
         {/* Address Information */}
-        <Row className="mb-4">
+        <Row>
           <Col>
             <h2 className="h5">Address Information</h2>
             <Form.Group className="mb-3" controlId="street">
@@ -166,7 +227,7 @@ const NewLead: React.FC = () => {
         </Row>
 
         {/* Description Information */}
-        <Row className="mb-4">
+        <Row>
           <Col>
             <h2 className="h5">Description Information</h2>
             <Form.Group className="mb-3" controlId="description">

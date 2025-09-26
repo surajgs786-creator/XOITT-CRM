@@ -1,11 +1,9 @@
-
-'use client'
+'use client';
 //import node module libraries
-
 
 import { Row, Col, Button } from 'react-bootstrap';
 import { IconPlus } from '@tabler/icons-react';
-import { useRouter } from 'next/navigation';// Import useNavigate
+import { useRouter } from 'next/navigation'; // Import useNavigate
 
 //import custom components
 import Flex from 'src/components/common/Flex';

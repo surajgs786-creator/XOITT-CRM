@@ -7,9 +7,7 @@ import { leadData } from 'src/data/LeadData';
 import TableContainer from '../common/TableContainer';
 
 const LeadContainer = () => {
-  return (
-    <TableContainer data={leadData} columnDef={leadListColumns } />
-  );
+  return <TableContainer data={leadData} columnDef={leadListColumns} />;
 };
 
 export default LeadContainer;

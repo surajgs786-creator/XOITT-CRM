@@ -6,7 +6,7 @@ import {
   Card,
   CardHeader,
   FormControl,
-  Button
+  Button,
 } from 'react-bootstrap';
 
 //import custom components
@@ -15,12 +15,12 @@ import TanstackTable from 'src/components/table/TanstackTable';
 
 //import required data files
 interface TableContainerProps {
-    data: any[];
-    columnDef: any[];
+  data: any[];
+  columnDef: any[];
 }
 
-const TableContainer = (props:TableContainerProps) => {
-const { data, columnDef } = props;
+const TableContainer = (props: TableContainerProps) => {
+  const { data, columnDef } = props;
   return (
     <Row>
       <Col>
