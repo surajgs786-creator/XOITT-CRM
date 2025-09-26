@@ -34,7 +34,7 @@ export default function CustomToggle({
         to="#"
         onClick={(e) => {
           e.preventDefault(); // Prevent default link behavior
-          decoratedOnClick();
+          decoratedOnClick(e);
         }}
         className={`dropdown-toggle ${isCurrentEventKey ? 'active' : ''}`}
         data-bs-toggle="dropdown"

@@ -6,7 +6,7 @@ import {
   IconUsers,
 } from '@tabler/icons-react';
 
-// Simple ID generator to replace heavy UUID library
+// Simple ID generator to replace heavy generateId library
 let idCounter = 0;
 const generateId = () => `id_${++idCounter}_${Date.now()}`;
 
@@ -18,7 +18,7 @@ import {
   ProjectType,
   Task,
   TeamsProps,
-} from 'DashboardTypes';
+} from '../types/DashboardTypes';
 
 export const DashboardStatsData: DashboardStatType[] = [
   {
@@ -70,7 +70,7 @@ export const DashboardStatsData: DashboardStatType[] = [
 // Active projects data
 export const activeProject: ProjectType[] = [
   {
-    id: uuid(),
+    id: generateId(),
     name: 'Website Redesign',
     deadline: 'Jan 30, 2025',
     progress: 65,
@@ -87,7 +87,7 @@ export const activeProject: ProjectType[] = [
     ],
   },
   {
-    id: uuid(),
+    id: generateId(),
     name: 'Marketing Campaign',
     deadline: 'Feb 10, 2025',
     progress: 20,
@@ -101,7 +101,7 @@ export const activeProject: ProjectType[] = [
     ],
   },
   {
-    id: uuid(),
+    id: generateId(),
     name: 'Mobile App Development',
     deadline: 'Mar 1, 2025',
     progress: 45,
@@ -114,7 +114,7 @@ export const activeProject: ProjectType[] = [
     ],
   },
   {
-    id: uuid(),
+    id: generateId(),
     name: 'Customer Portal Upgrade',
     deadline: 'Feb 15, 2025',
     progress: 89,
@@ -128,7 +128,7 @@ export const activeProject: ProjectType[] = [
     ],
   },
   {
-    id: uuid(),
+    id: generateId(),
     name: 'Product Launch',
     deadline: 'Jan 25, 2025',
     progress: 100,

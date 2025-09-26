@@ -6,25 +6,41 @@ import Sidebar from './layouts/Sidebar';
 import Header from './layouts/header/Header';
 import { Provider } from 'react-redux';
 import store from './store/store';
+import Flex from './components/common/Flex';
+import LeadContainer from './components/Leads/LeadsContainer';
+import LeadDetails from './components/Leads/LeadDetails';
 
 function App() {
   return (
-    <Provider store={store}>
-      <Router>
-        <div className="d-flex flex-column min-vh-100">
-          <Header />
-          <div className="d-flex flex-fill">
-            <Sidebar hideLogo={false} containerId="miniSidebar" />
-            <main className="flex-fill">
-              <Routes>
+    <div>
+
+<Provider store={store}>
+<Router>
+<Sidebar hideLogo={false} containerId="miniSidebar" />
+<div id="content" className="position-relative h-100 ">
+  <Header />
+        
+            <Flex direction="column" flex="1" className="p-3">
+            <Routes>
                 <Route path="/dashboard" element={<DashboardPage />} />
                 <Route path="/" element={<DashboardPage/>} />
+                <Route path="/leads" element={<LeadContainer/>} />
+                <Route path="/leadDetails" element={<LeadDetails/>} />
+                <Route path="/leadDetails?action=Edit" element={<LeadDetails/>} />
+                <Route path="/leadDetails?action=View" element={<LeadDetails/>} />
               </Routes>
-            </main>
-          </div>
-        </div>
-      </Router>
-    </Provider>
+            </Flex>
+            
+         
+  </div>
+</Router>
+</Provider>
+    </div>
+   
+        
+          
+          
+     
   );
 }
 
