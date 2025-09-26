@@ -32,8 +32,8 @@ export const DashboardMenu: MenuItemType[] = [
       },
       {
         id: uuid(),
-        name: 'Contacts',
-        link: 'contacts',
+        name: 'Customers',
+        link: 'customers',
       },
       {
         id: uuid(),

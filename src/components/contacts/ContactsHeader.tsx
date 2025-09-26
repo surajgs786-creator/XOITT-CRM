@@ -1,12 +1,20 @@
+'use client';
 //import node module libraries
+
 import { Row, Col, Button } from 'react-bootstrap';
 import { IconPlus } from '@tabler/icons-react';
+import { useRouter } from 'next/navigation'; // Import useNavigate
 
 //import custom components
 import Flex from 'src/components/common/Flex';
-import DasherBreadcrumb from 'src/components/common/DasherBreadcrumb';
 
-const EcommerceHeader = () => {
+const ContactsHeader = () => {
+  const router = useRouter(); // Initialize useNavigate
+
+  const handleNewLeadClick = () => {
+    router.push('/customers/new'); // Navigate to the New Lead page
+  };
+
   return (
     <Row>
       <Col>
@@ -17,17 +25,16 @@ const EcommerceHeader = () => {
           breakpoint="md"
         >
           <div>
-            <h1 className="mb-3 h2">Products</h1>
-            <DasherBreadcrumb />
+            <h1 className="mb-3 h2">Customers</h1>
           </div>
           <div>
             <Button
-              href="#"
+              onClick={handleNewLeadClick} // Add onClick handler
               variant="dark"
-              className=" d-md-flex align-items-center gap-2"
+              className="d-md-flex align-items-center gap-2"
             >
               <IconPlus size={18} />
-              New Product
+              New Customer
             </Button>
           </div>
         </Flex>
@@ -36,4 +43,4 @@ const EcommerceHeader = () => {
   );
 };
 
-export default EcommerceHeader;
+export default ContactsHeader;

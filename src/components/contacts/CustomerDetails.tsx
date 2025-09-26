@@ -3,6 +3,7 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import { useRouter } from 'next/navigation';
 
 type FormData = {
   leadOwner: string;
@@ -33,7 +34,11 @@ type FormData = {
   description: string;
 };
 
-const NewLead: React.FC = () => {
+
+interface CustomerDetailsProps {
+  mode?: 'New' | 'Edit'| 'View';
+}
+const CustomerDetails: React.FC <CustomerDetailsProps>= ({mode}) => {
   const {
     register,
     handleSubmit,
@@ -53,9 +58,9 @@ const NewLead: React.FC = () => {
       });
 
       if (response.ok) {
-        console.log("Lead created successfully!");
+        console.log("Customer created successfully!");
       } else {
-        console.error("Failed to create lead");
+        console.error("Failed to create Customer");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -64,14 +69,14 @@ const NewLead: React.FC = () => {
 
   return (
     <Container className="mt-4">
-      <h1 className="mb-4">Create Lead</h1>
+      <h1 className="mb-4">{mode} Customer</h1>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Row>
-          {/* Lead Information */}
+          {/* Customer Information */}
           <Col md={6}>
-            <h2 className="h5">Lead Information</h2>
+            <h2 className="h5">Customer Information</h2>
             <Form.Group className="mb-3" controlId="leadOwner">
-              <Form.Label>Lead Owner</Form.Label>
+              <Form.Label>Customer Owner</Form.Label>
               <Form.Select {...register("leadOwner")}>
                 <option value="">-None-</option>
                 <option value="suraj-gs">SURAJ GS</option>
@@ -101,7 +106,7 @@ const NewLead: React.FC = () => {
               <Form.Control type="text" {...register("mobile")} />
             </Form.Group>
             <Form.Group className="mb-3" controlId="leadSource">
-              <Form.Label>Lead Source</Form.Label>
+              <Form.Label>Customer Source</Form.Label>
               <Form.Select {...register("leadSource")}>
                 <option value="">-None-</option>
               </Form.Select>
@@ -169,7 +174,7 @@ const NewLead: React.FC = () => {
               <Form.Control type="text" {...register("website")} />
             </Form.Group>
             <Form.Group className="mb-3" controlId="leadStatus">
-              <Form.Label>Lead Status</Form.Label>
+              <Form.Label>Customer Status</Form.Label>
               <Form.Select {...register("leadStatus")}>
                 <option value="">-None-</option>
               </Form.Select>
@@ -251,4 +256,4 @@ const NewLead: React.FC = () => {
   );
 };
 
-export default NewLead;
+export default CustomerDetails;
