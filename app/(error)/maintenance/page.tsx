@@ -1,19 +1,18 @@
 //import node modules libraries
-import { Fragment } from "react";
-import Link from "next/link";
-import { Row, Col, Image } from "react-bootstrap";
+import { Fragment } from 'react';
+import Link from 'next/link';
+import { Row, Col, Image } from 'react-bootstrap';
 import {
   IconClock,
   IconDeviceDesktop,
   IconLifebuoy,
-} from "@tabler/icons-react";
-import { Metadata } from "next";
-import { getAssetPath } from "helper/assetPath";
-
+} from '@tabler/icons-react';
+import { Metadata } from 'next';
+import { getAssetPath } from 'helper/assetPath';
 
 export const metadata: Metadata = {
-  title: "Maintenance | Dasher - Responsive Bootstrap 5 Admin Dashboard",
-  description: "Dasher - Responsive Bootstrap 5 Admin Dashboard",
+  title: 'Maintenance | Dasher - Responsive Bootstrap 5 Admin Dashboard',
+  description: 'Dasher - Responsive Bootstrap 5 Admin Dashboard',
 };
 
 const Maintenance = () => {
@@ -30,9 +29,9 @@ const Maintenance = () => {
           </div>
           <div>
             <Image
-              src={getAssetPath("/images/svg/maintenance.svg")}
+              src={getAssetPath('/images/svg/maintenance.svg')}
               alt="Image"
-              style={{ width: "500px" }}
+              style={{ width: '500px' }}
             />
           </div>
         </Col>

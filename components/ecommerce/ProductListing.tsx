@@ -1,4 +1,4 @@
-"use client";
+'use client';
 //import node modules libraries
 import {
   Row,
@@ -11,15 +11,15 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-} from "react-bootstrap";
+} from 'react-bootstrap';
 
 //import custom components
-import Flex from "components/common/Flex";
-import TanstackTable from "components/table/TanstackTable";
-import { productListColumns } from "./ColumnDifinitions";
+import Flex from 'components/common/Flex';
+import TanstackTable from 'components/table/TanstackTable';
+import { productListColumns } from './ColumnDifinitions';
 
 //import required data files
-import { productListData } from "data/EcommerceData";
+import { productListData } from 'data/EcommerceData';
 
 const ProductListing = () => {
   return (

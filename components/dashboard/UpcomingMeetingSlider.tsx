@@ -1,13 +1,13 @@
-"use client";
+'use client';
 //import node modules libraries
-import { useRef } from "react";
-import { Button, Card, CardBody, Image, Row, Col } from "react-bootstrap";
-import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { useRef } from 'react';
+import { Button, Card, CardBody, Image, Row, Col } from 'react-bootstrap';
+import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 //import required data files
-import { EventList } from "data/DashboardData";
-import { getAssetPath } from "helper/assetPath";
+import { EventList } from 'data/DashboardData';
+import { getAssetPath } from 'helper/assetPath';
 
 const UpcomingMeetingSlider = () => {
   const prevRef = useRef(null);
@@ -27,13 +27,13 @@ const UpcomingMeetingSlider = () => {
               ref={prevRef}
               onClick={() => swiperRef?.current?.swiper.slidePrev()}
               className="swiper-button-prev ms-n4"
-              style={{ cursor: "pointer" }}
+              style={{ cursor: 'pointer' }}
             />
             <div
               ref={nextRef}
               onClick={() => swiperRef?.current?.swiper.slideNext()}
               className="swiper-button-next ms-5"
-              style={{ cursor: "pointer" }}
+              style={{ cursor: 'pointer' }}
             />
           </div>
         </div>
@@ -55,7 +55,7 @@ const UpcomingMeetingSlider = () => {
               onInit={(swiper) => {
                 if (
                   swiper.params.navigation &&
-                  typeof swiper.params.navigation === "object"
+                  typeof swiper.params.navigation === 'object'
                 ) {
                   (
                     swiper.params.navigation as {
@@ -95,7 +95,10 @@ const UpcomingMeetingSlider = () => {
                         </div>
 
                         <div className="d-flex align-items-center gap-2 text-secondary mt-4">
-                          <Image src={getAssetPath("/images/svg/zoom.svg")} alt="" />
+                          <Image
+                            src={getAssetPath('/images/svg/zoom.svg')}
+                            alt=""
+                          />
                           <span>Zoom</span>
                         </div>
                       </div>

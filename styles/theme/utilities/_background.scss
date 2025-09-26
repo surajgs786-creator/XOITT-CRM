@@ -3,23 +3,43 @@
 // Background gradient color
 
 .bg-gradient-success {
-  background: linear-gradient(320deg, rgba(211, 252, 210, 0.7) 0%, var(--#{$prefix}white) 70%);
+  background: linear-gradient(
+    320deg,
+    rgba(211, 252, 210, 0.7) 0%,
+    var(--#{$prefix}white) 70%
+  );
 }
 
 .bg-gradient-info {
-  background: linear-gradient(320deg, rgb(201, 253, 245, 0.7) 0%, var(--#{$prefix}white) 70%);
+  background: linear-gradient(
+    320deg,
+    rgb(201, 253, 245, 0.7) 0%,
+    var(--#{$prefix}white) 70%
+  );
 }
 
 .bg-gradient-warning {
-  background: linear-gradient(320deg, rgb(255, 245, 204, 0.7) 0%, var(--#{$prefix}white) 70%);
+  background: linear-gradient(
+    320deg,
+    rgb(255, 245, 204, 0.7) 0%,
+    var(--#{$prefix}white) 70%
+  );
 }
 
 .bg-gradient-danger {
-  background: linear-gradient(320deg, rgb(255, 233, 213, 0.7) 0%, var(--#{$prefix}white) 70%);
+  background: linear-gradient(
+    320deg,
+    rgb(255, 233, 213, 0.7) 0%,
+    var(--#{$prefix}white) 70%
+  );
 }
 
 .bg-gradient-mixed {
-  background: linear-gradient(94.82deg, var(--#{$prefix}danger-lighter) 1.11%, var(--#{$prefix}primary-lighter) 99.11%);
+  background: linear-gradient(
+    94.82deg,
+    var(--#{$prefix}danger-lighter) 1.11%,
+    var(--#{$prefix}primary-lighter) 99.11%
+  );
 }
 
 .color-facebook {

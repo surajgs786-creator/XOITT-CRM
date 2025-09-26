@@ -1,8 +1,8 @@
-"use client";
+'use client';
 // import node module libraries
-import React, { Fragment, useState } from "react";
-import { Table } from "react-bootstrap";
-import { ChevronUp, ChevronDown } from "react-feather";
+import React, { Fragment, useState } from 'react';
+import { Table } from 'react-bootstrap';
+import { ChevronUp, ChevronDown } from 'react-feather';
 import {
   flexRender,
   getCoreRowModel,
@@ -13,11 +13,11 @@ import {
   ColumnDef,
   SortingState,
   RowSelectionState,
-} from "@tanstack/react-table";
+} from '@tanstack/react-table';
 
 // import custom components
-import GlobalFilter from "./GlobalFilter";
-import TablePagination from "./TablePagination";
+import GlobalFilter from './GlobalFilter';
+import TablePagination from './TablePagination';
 
 interface TanstackTableProps<TData> {
   data: TData[];
@@ -49,7 +49,7 @@ function TanstackTable<TData>({
   isSortable = false,
   ...props
 }: TanstackTableProps<TData>) {
-  const [filtering, setFiltering] = useState<string>("");
+  const [filtering, setFiltering] = useState<string>('');
   const [rowSelection, setRowSelection] = useState<RowSelectionState>({});
   const [sorting, setSorting] = useState<SortingState>([]);
 
@@ -93,12 +93,12 @@ function TanstackTable<TData>({
         />
       )}
 
-      <div className={className ? className : "table-responsive table-card"}>
+      <div className={className ? className : 'table-responsive table-card'}>
         <Table
           className={
-            tableClass ? tableClass : "text-nowrap table-centered mt-0"
+            tableClass ? tableClass : 'text-nowrap table-centered mt-0'
           }
-          style={{ width: "100%" }}
+          style={{ width: '100%' }}
           id="example"
           {...props}
         >
@@ -116,13 +116,13 @@ function TanstackTable<TData>({
                         <div
                           {...{
                             className: header.column.getCanSort()
-                              ? "sorting"
-                              : "",
+                              ? 'sorting'
+                              : '',
                           }}
                         >
                           {flexRender(
                             header.column.columnDef.header,
-                            header.getContext()
+                            header.getContext(),
                           )}
                           {{
                             asc: <ChevronUp size={16} />,
@@ -144,7 +144,7 @@ function TanstackTable<TData>({
                 onClick={
                   onRowClick ? () => onRowClick(row.original) : undefined
                 }
-                style={onRowClick ? { cursor: "pointer" } : undefined}
+                style={onRowClick ? { cursor: 'pointer' } : undefined}
               >
                 {row.getVisibleCells().map((cell) => (
                   <td key={cell.id} className={tdClass}>

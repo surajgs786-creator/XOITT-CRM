@@ -1,10 +1,10 @@
 // import node module libraries
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // import app config file
-import { settings } from "app.config";
+import { settings } from 'app.config';
 
-export type MenuToggleType = "expanded" | "collapsed";
+export type MenuToggleType = 'expanded' | 'collapsed';
 
 interface initialStateType {
   skin: string;
@@ -15,10 +15,10 @@ interface initialStateType {
 const initialState: initialStateType = {
   skin: settings.theme.skin,
   showMenu: true,
-  collapsed: "expanded",
+  collapsed: 'expanded',
 };
 const appSlice = createSlice({
-  name: "app",
+  name: 'app',
   initialState,
   reducers: {
     changeSkin: (state, action) => {
@@ -28,10 +28,10 @@ const appSlice = createSlice({
       state.showMenu = action.payload.showMenu;
     },
     setCollapsed: (state, action: PayloadAction<{ value: MenuToggleType }>) => {
-      document
-        .querySelector("html")
-        ?.setAttribute("class", action.payload.value),
-        (state.collapsed = action.payload.value);
+      (document
+        .querySelector('html')
+        ?.setAttribute('class', action.payload.value),
+        (state.collapsed = action.payload.value));
     },
   },
 });

@@ -1,11 +1,11 @@
 //import node modules libraries
-import { Row, Col, Card, CardBody, Button } from "react-bootstrap";
+import { Row, Col, Card, CardBody, Button } from 'react-bootstrap';
 
 //import required data files
-import { teamMembers } from "data/DashboardData";
+import { teamMembers } from 'data/DashboardData';
 
 //import custom components
-import { Avatar } from "components/common/Avatar";
+import { Avatar } from 'components/common/Avatar';
 
 const TeamsTable = () => {
   return (
@@ -22,8 +22,8 @@ const TeamsTable = () => {
                   key={index}
                   className={`d-flex justify-content-between align-items-end py-3 ${
                     index !== teamMembers.length - 1
-                      ? "border-bottom border-dashed"
-                      : ""
+                      ? 'border-bottom border-dashed'
+                      : ''
                   }`}
                 >
                   <div className="d-flex align-items-center gap-3">

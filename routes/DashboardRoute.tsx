@@ -1,54 +1,54 @@
 //import node modules libraries
-import { v4 as uuid } from "uuid";
+import { v4 as uuid } from 'uuid';
 import {
   IconFiles,
   IconShoppingBag,
   IconNews,
   IconFile,
   IconLock,
-} from "@tabler/icons-react";
+} from '@tabler/icons-react';
 
 //import custom type
-import { MenuItemType } from "types/menuTypes";
+import { MenuItemType } from 'types/menuTypes';
 
 export const DashboardMenu: MenuItemType[] = [
   {
     id: uuid(),
-    title: "Project",
-    link: "/",
+    title: 'Dashboard',
+    link: '/',
     icon: <IconFiles size={20} strokeWidth={1.5} />,
   },
   {
     id: uuid(),
-    title: "Ecommerce",
-    link: "/ecommerce",
+    title: 'Ecommerce',
+    link: '/ecommerce',
     icon: <IconShoppingBag size={20} strokeWidth={1.5} />,
   },
   {
     id: uuid(),
-    title: "Blog",
-    link: "/blog",
+    title: 'Blog',
+    link: '/blog',
     icon: <IconNews size={20} strokeWidth={1.5} />,
   },
   {
     id: uuid(),
-    title: "Auth",
-    link: "/sign-in",
+    title: 'Auth',
+    link: '/sign-in',
     icon: <IconLock size={20} strokeWidth={1.5} />,
   },
 
   {
     id: uuid(),
-    title: "Pages",
+    title: 'Pages',
     grouptitle: true,
   },
   {
     id: uuid(),
-    title: "Pages",
+    title: 'Pages',
     icon: <IconFile size={20} strokeWidth={1.5} />,
     children: [
-      { id: uuid(), name: "Maintenance", link: "maintenance" },
-      { id: uuid(), name: "404 Error", link: "not-found" },
+      { id: uuid(), name: 'Maintenance', link: 'maintenance' },
+      { id: uuid(), name: '404 Error', link: 'not-found' },
     ],
   },
 ];

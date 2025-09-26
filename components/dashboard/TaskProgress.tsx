@@ -1,11 +1,11 @@
-"use client";
+'use client';
 //import node modules libraries
-import { IconCircleCheck, IconCircleDashedCheck } from "@tabler/icons-react";
-import { Row, Col, Card, CardBody } from "react-bootstrap";
+import { IconCircleCheck, IconCircleDashedCheck } from '@tabler/icons-react';
+import { Row, Col, Card, CardBody } from 'react-bootstrap';
 
 //import custom components
-import DasherTippy from "components/common/DasherTippy";
-import CustomProgressBar from "components/common/CustomProgressBar";
+import DasherTippy from 'components/common/DasherTippy';
+import CustomProgressBar from 'components/common/CustomProgressBar';
 
 const TaskProgress = () => {
   return (
@@ -21,7 +21,7 @@ const TaskProgress = () => {
               <CustomProgressBar
                 className="mb-2"
                 now={100}
-                style={{ height: "3px" }}
+                style={{ height: '3px' }}
                 variant="info-light"
               />
             </DasherTippy>
@@ -32,7 +32,7 @@ const TaskProgress = () => {
               <CustomProgressBar
                 className="mb-2"
                 now={100}
-                style={{ height: "3px" }}
+                style={{ height: '3px' }}
                 variant="success-light"
               />
             </DasherTippy>
@@ -43,7 +43,7 @@ const TaskProgress = () => {
               <CustomProgressBar
                 className="mb-2"
                 now={100}
-                style={{ height: "3px" }}
+                style={{ height: '3px' }}
                 variant="danger-light"
               />
             </DasherTippy>
@@ -54,7 +54,7 @@ const TaskProgress = () => {
               <CustomProgressBar
                 className="mb-2"
                 now={100}
-                style={{ height: "3px" }}
+                style={{ height: '3px' }}
                 variant="warning-light"
               />
             </DasherTippy>

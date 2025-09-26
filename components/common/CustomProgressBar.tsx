@@ -1,5 +1,5 @@
-"use client";
-import React from "react";
+'use client';
+import React from 'react';
 
 type Props = {
   now: number;
@@ -10,14 +10,14 @@ type Props = {
   striped?: boolean;
   animated?: boolean;
   variant?:
-    | "primary"
-    | "secondary"
-    | "success"
-    | "danger"
-    | "warning"
-    | "info"
-    | "light"
-    | "dark"
+    | 'primary'
+    | 'secondary'
+    | 'success'
+    | 'danger'
+    | 'warning'
+    | 'info'
+    | 'light'
+    | 'dark'
     | string;
   style?: React.CSSProperties;
   className?: string;
@@ -33,18 +33,18 @@ const CustomProgressBar: React.FC<Props> = ({
   animated = false,
   variant,
   style,
-  className = "",
+  className = '',
 }) => {
   const percentage = Math.min(
     Math.max(((now - min) / (max - min)) * 100, 0),
-    100
+    100,
   );
 
-  let barClass = "progress-bar";
+  let barClass = 'progress-bar';
   if (variant) barClass += ` bg-${variant}`;
-  if (striped) barClass += " progress-bar-striped";
-  if (animated) barClass += " progress-bar-animated";
-  if (visuallyHidden) barClass += " visually-hidden";
+  if (striped) barClass += ' progress-bar-striped';
+  if (animated) barClass += ' progress-bar-animated';
+  if (visuallyHidden) barClass += ' visually-hidden';
 
   return (
     <div className={`progress ${className}`} style={style}>

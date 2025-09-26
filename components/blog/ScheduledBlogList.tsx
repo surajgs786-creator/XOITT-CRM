@@ -1,16 +1,16 @@
-"use client";
+'use client';
 //import node modules libraries
-import { Row, Col, Card, Form } from "react-bootstrap";
+import { Row, Col, Card, Form } from 'react-bootstrap';
 
 //import custom components
-import TanstackTable from "components/table/TanstackTable";
-import { blogListColumns } from "./ColumnDifinitions";
-import { blogListData } from "data/BlogData";
+import TanstackTable from 'components/table/TanstackTable';
+import { blogListColumns } from './ColumnDifinitions';
+import { blogListData } from 'data/BlogData';
 
 const ScheduledBlogList = () => {
   // Filter data based on the status
   const scheduledBlogs = blogListData.filter(
-    (item) => item.post_status === "Scheduled"
+    (item) => item.post_status === 'Scheduled',
   );
 
   return (

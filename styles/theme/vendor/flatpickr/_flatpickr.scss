@@ -139,8 +139,12 @@
       &:nth-child(n + 2) {
         .flatpickr-day.inRange {
           &:nth-child(7n + 1) {
-            -webkit-box-shadow: -2px 0 0 $gray-200, 5px 0 0 var(--#{$prefix}gray-200);
-            box-shadow: -2px 0 0 $gray-200, 5px 0 0 var(--#{$prefix}gray-200);
+            -webkit-box-shadow:
+              -2px 0 0 $gray-200,
+              5px 0 0 var(--#{$prefix}gray-200);
+            box-shadow:
+              -2px 0 0 $gray-200,
+              5px 0 0 var(--#{$prefix}gray-200);
           }
         }
       }
@@ -630,8 +634,12 @@ span.flatpickr-weekday {
   background: var(--#{$prefix}gray-200);
   border-color: var(--#{$prefix}gray-200);
   border-radius: 0;
-  -webkit-box-shadow: -5px 0 0 $gray-200, 5px 0 0 var(--#{$prefix}gray-200);
-  box-shadow: -5px 0 0 $gray-200, 5px 0 0 var(--#{$prefix}gray-200);
+  -webkit-box-shadow:
+    -5px 0 0 $gray-200,
+    5px 0 0 var(--#{$prefix}gray-200);
+  box-shadow:
+    -5px 0 0 $gray-200,
+    5px 0 0 var(--#{$prefix}gray-200);
 }
 
 .flatpickr-day.prevMonthDay.inRange {
@@ -955,8 +963,12 @@ span.flatpickr-weekday {
 
 .flatpickr-day.week.selected {
   border-radius: 0;
-  -webkit-box-shadow: -5px 0 0 $primary, 5px 0 0 var(--#{$prefix}primary);
-  box-shadow: -5px 0 0 $primary, 5px 0 0 var(--#{$prefix}primary);
+  -webkit-box-shadow:
+    -5px 0 0 $primary,
+    5px 0 0 var(--#{$prefix}primary);
+  box-shadow:
+    -5px 0 0 $primary,
+    5px 0 0 var(--#{$prefix}primary);
 }
 
 .flatpickr-day.hidden {
@@ -1151,5 +1163,7 @@ span.flatpickr-weekday {
 
 .flatpickr-input[readonly] {
   cursor: pointer;
-  background-color: var(--#{$prefix}white); // overide of bootstrap readonly input
+  background-color: var(
+    --#{$prefix}white
+  ); // overide of bootstrap readonly input
 }

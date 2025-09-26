@@ -1,9 +1,9 @@
 //import node modules libraries
-import { IconCircleFilled } from "@tabler/icons-react";
-import { Card, CardBody, Button } from "react-bootstrap";
+import { IconCircleFilled } from '@tabler/icons-react';
+import { Card, CardBody, Button } from 'react-bootstrap';
 
 //import require data files
-import { activityLog } from "data/DashboardData";
+import { activityLog } from 'data/DashboardData';
 
 const ActivityLog = () => {
   return (

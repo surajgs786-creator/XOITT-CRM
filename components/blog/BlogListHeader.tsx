@@ -1,10 +1,10 @@
 //import node modules libraries
-import { Row, Col, Button } from "react-bootstrap";
-import { IconPlus } from "@tabler/icons-react";
+import { Row, Col, Button } from 'react-bootstrap';
+import { IconPlus } from '@tabler/icons-react';
 
 //import custom components
-import Flex from "components/common/Flex";
-import DasherBreadcrumb from "components/common/DasherBreadcrumb";
+import Flex from 'components/common/Flex';
+import DasherBreadcrumb from 'components/common/DasherBreadcrumb';
 
 const BlogListHeader = () => {
   return (

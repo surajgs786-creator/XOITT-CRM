@@ -5,6 +5,6 @@ export interface ProductListType {
   addedDate: string;
   price: string;
   quantity: number;
-  status: "Active" | "Deactive";
+  status: 'Active' | 'Deactive';
   imageSrc: string;
 }

@@ -1,8 +1,8 @@
 //import node modules libraries
-import { Col, Card, CardBody } from "react-bootstrap";
+import { Col, Card, CardBody } from 'react-bootstrap';
 
 //import required data files
-import { DashboardStatsData } from "data/DashboardData";
+import { DashboardStatsData } from 'data/DashboardData';
 
 const DashboardStats = () => {
   return (

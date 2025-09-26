@@ -1,7 +1,7 @@
 //import node modules libraries
-import { useContext, ReactNode } from "react";
-import { AccordionContext, useAccordionButton, Nav } from "react-bootstrap";
-import Link from "next/link";
+import { useContext, ReactNode } from 'react';
+import { AccordionContext, useAccordionButton, Nav } from 'react-bootstrap';
+import Link from 'next/link';
 
 interface CustomToggleProps {
   children: ReactNode;
@@ -23,7 +23,7 @@ export default function CustomToggle({
   const { activeEventKey } = useContext(AccordionContext);
   const decoratedOnClick = useAccordionButton(
     eventKey,
-    () => callback && callback(eventKey)
+    () => callback && callback(eventKey),
   );
 
   const isCurrentEventKey = activeEventKey === eventKey;
@@ -46,10 +46,10 @@ export default function CustomToggle({
 export function CustomToggleLevel2({
   children,
   eventKey,
-  className = "nav-link",
-  href = "#",
-  dataBsTarget = "",
-  ariaControls = "",
+  className = 'nav-link',
+  href = '#',
+  dataBsTarget = '',
+  ariaControls = '',
 }: CustomToggleProps) {
   const { activeEventKey } = useContext(AccordionContext);
   const decoratedOnClick = useAccordionButton(eventKey);

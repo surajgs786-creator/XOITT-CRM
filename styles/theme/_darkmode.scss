@@ -28,7 +28,9 @@
   }
 
   .dropdown-menu {
-    box-shadow: 0 0 2px 0 rgba(0 0 0 / 0.2), 0 12px 24px -4px rgba(0 0 0 / 0.12);
+    box-shadow:
+      0 0 2px 0 rgba(0 0 0 / 0.2),
+      0 12px 24px -4px rgba(0 0 0 / 0.12);
   }
 
   --#{$prefix}navbar-bg: $gray-800;
@@ -37,7 +39,8 @@
   --#{$prefix}box-shadow: 0 4px 8px 0 rgba(0 0 0 / 0.16) !important;
   --#{$prefix}box-shadow-sm: 0 8px 16px 0 rgba(0 0 0 / 0.16) !important;
   --#{$prefix}box-shadow-lg: 0 12px 24px -4px rgba(0 0 0 / 0.16) !important;
-  --#{$prefix}box-shadow-xl: 0 0 2px 0 rgba(0 0 0 / 0.2), 0 12px 24px -4px rgba(0 0 0 / 0.12) !important;
+  --#{$prefix}box-shadow-xl:
+    0 0 2px 0 rgba(0 0 0 / 0.2), 0 12px 24px -4px rgba(0 0 0 / 0.12) !important;
 
   // Button
   @each $color, $value in $theme-colors {
@@ -78,12 +81,16 @@
   @each $color, $value in $theme-colors {
     $color-rgb: to-rgb($value);
     .text-bg-#{$color} {
-      color: color-contrast($value) if($enable-important-utilities, !important, null);
-      background-color: rgba($color-rgb, var(--#{$prefix}bg-opacity, 1)) if($enable-important-utilities, !important, null);
+      color: color-contrast($value)
+        if($enable-important-utilities, !important, null);
+      background-color: rgba($color-rgb, var(--#{$prefix}bg-opacity, 1))
+        if($enable-important-utilities, !important, null);
     }
     .bg-#{$color} {
-      color: color-contrast($value) if($enable-important-utilities, !important, null);
-      background-color: rgba($color-rgb, var(--#{$prefix}bg-opacity, 1)) if($enable-important-utilities, !important, null);
+      color: color-contrast($value)
+        if($enable-important-utilities, !important, null);
+      background-color: rgba($color-rgb, var(--#{$prefix}bg-opacity, 1))
+        if($enable-important-utilities, !important, null);
     }
   }
   // Gray Color
@@ -98,7 +105,9 @@
 
   --#{$prefix}nav-pills-link-active-color: #{$gray-600};
   --#{$prefix}nav-pills-link-active-bg: #{$gray-800};
-  --#{$prefix}box-shadow-sm: 0px 3px 1px -2px rgba(0 0 0 / 0.2), 0px 2px 2px 0px rgba(0 0 0 / 0.14), 0px 1px 5px 0px rgba(0 0 0 / 0.12);
+  --#{$prefix}box-shadow-sm:
+    0px 3px 1px -2px rgba(0 0 0 / 0.2), 0px 2px 2px 0px rgba(0 0 0 / 0.14),
+    0px 1px 5px 0px rgba(0 0 0 / 0.12);
 
   .btn-light {
     --#{$prefix}btn-color: #{$gray-400};

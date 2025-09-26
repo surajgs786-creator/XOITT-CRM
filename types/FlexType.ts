@@ -5,8 +5,8 @@ import {
   DirectionType,
   HTMLElementType,
   JustifyContentType,
-} from "./Index";
-import { JSX } from "react";
+} from './Index';
+import { JSX } from 'react';
 
 export interface IFlex extends HTMLElementType {
   justifyContent?: JustifyContentType;

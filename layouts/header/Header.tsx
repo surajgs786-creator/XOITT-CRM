@@ -1,25 +1,25 @@
-"use client";
+'use client';
 //import node module libraries
-import React, { Fragment, useState } from "react";
-import Link from "next/link";
-import { useMediaQuery } from "react-responsive";
+import React, { Fragment, useState } from 'react';
+import Link from 'next/link';
+import { useMediaQuery } from 'react-responsive';
 import {
   IconArrowBarLeft,
   IconArrowBarRight,
   IconBell,
   IconMenu2,
   IconSearch,
-} from "@tabler/icons-react";
-import { Container, ListGroup, Navbar, Button } from "react-bootstrap";
+} from '@tabler/icons-react';
+import { Container, ListGroup, Navbar, Button } from 'react-bootstrap';
 
 //import custom components
-import UserMenu from "./UserMenu";
-import Flex from "components/common/Flex";
-import NoficationList from "components/common/NoficationList";
-import OffcanvasSidebar from "layouts/OffcanvasSidebar";
+import UserMenu from './UserMenu';
+import Flex from 'components/common/Flex';
+import NoficationList from 'components/common/NoficationList';
+import OffcanvasSidebar from 'layouts/OffcanvasSidebar';
 
 //import custom hooks
-import useMenu from "hooks/useMenu";
+import useMenu from 'hooks/useMenu';
 
 const Header = () => {
   const [isNoficationOpen, setIsNotificationOpen] = useState<boolean>(false);
@@ -35,7 +35,7 @@ const Header = () => {
             {isTablet && (
               <div
                 className="d-block d-lg-none"
-                style={{ cursor: "pointer" }}
+                style={{ cursor: 'pointer' }}
                 onClick={() => toggleMenuHandler(true)}
               >
                 <IconMenu2 size={24} />
@@ -43,10 +43,10 @@ const Header = () => {
             )}
             {isTablet || (
               <div>
-                <Link href={"#"} className="sidebar-toggle d-flex p-3">
+                <Link href={'#'} className="sidebar-toggle d-flex p-3">
                   <span
                     className="collapse-mini"
-                    onClick={() => handleCollapsed("expanded")}
+                    onClick={() => handleCollapsed('expanded')}
                   >
                     <IconArrowBarLeft
                       size={20}
@@ -56,7 +56,7 @@ const Header = () => {
                   </span>
                   <span
                     className="collapse-expanded"
-                    onClick={() => handleCollapsed("collapsed")}
+                    onClick={() => handleCollapsed('collapsed')}
                   >
                     <IconArrowBarRight
                       size={20}
@@ -70,10 +70,9 @@ const Header = () => {
           </Flex>
           <ListGroup
             bsPrefix="list-unstyled"
-            as={"ul"}
+            as={'ul'}
             className="d-flex align-items-center mb-0 gap-2"
           >
-
             <ListGroup.Item as="li">
               <Button
                 variant="ghost"

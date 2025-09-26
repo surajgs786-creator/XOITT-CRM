@@ -19,25 +19,25 @@ imgtooltip	: Optional - Boolean - Default=false, if you specify this parameter, 
 */
 
 // import node module libraries
-import { Image } from "react-bootstrap";
-import React, { ReactNode } from "react";
+import { Image } from 'react-bootstrap';
+import React, { ReactNode } from 'react';
 
 // import custom components
-import DasherTippy from "./DasherTippy";
-import { getAssetPath } from "helper/assetPath";
+import DasherTippy from './DasherTippy';
+import { getAssetPath } from 'helper/assetPath';
 
-type AvatarSize = "xxl" | "xl" | "lg" | "md" | "sm" | "xs";
-type AvatarType = "image" | "initial";
-type AvatarStatus = "online" | "away" | "offline" | "busy";
+type AvatarSize = 'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
+type AvatarType = 'image' | 'initial';
+type AvatarStatus = 'online' | 'away' | 'offline' | 'busy';
 type AvatarVariant =
-  | "primary"
-  | "secondary"
-  | "success"
-  | "danger"
-  | "warning"
-  | "info"
-  | "light"
-  | "dark";
+  | 'primary'
+  | 'secondary'
+  | 'success'
+  | 'danger'
+  | 'warning'
+  | 'info'
+  | 'light'
+  | 'dark';
 
 interface AvatarProps {
   size?: AvatarSize;
@@ -56,24 +56,24 @@ interface AvatarProps {
 
 const Avatar: React.FC<AvatarProps> = (props) => {
   const {
-    size = "md",
+    size = 'md',
     type,
     src,
     alt,
     name,
-    className = "",
+    className = '',
     status,
     soft = false,
-    variant = "primary",
+    variant = 'primary',
     showExact = false,
     imgtooltip,
     bodyClasses,
   } = props;
 
   const GetAvatar = () => {
-    if (type === "initial" && name) {
+    if (type === 'initial' && name) {
       const matches = name.match(/\b(\w)/g);
-      const acronym = showExact ? name : matches?.join("") ?? "";
+      const acronym = showExact ? name : (matches?.join('') ?? '');
       if (soft) {
         return imgtooltip ? (
           <DasherTippy content={name}>
@@ -97,7 +97,7 @@ const Avatar: React.FC<AvatarProps> = (props) => {
             <span
               title={alt}
               className={`avatar avatar-${size} avatar-primary me-0 mb-2 mb-lg-0 ${
-                status ? "avatar-indicators avatar-" + status : ""
+                status ? 'avatar-indicators avatar-' + status : ''
               }`}
             >
               <span className={`avatar-initials bg-${variant} ${className}`}>
@@ -111,7 +111,7 @@ const Avatar: React.FC<AvatarProps> = (props) => {
           <span
             title={alt}
             className={`avatar avatar-${size} avatar-primary me-0 mb-2 mb-lg-0 ${
-              status ? "avatar-indicators avatar-" + status : ""
+              status ? 'avatar-indicators avatar-' + status : ''
             }`}
           >
             <span className={`avatar-initials bg-${variant} ${className}`}>
@@ -120,13 +120,13 @@ const Avatar: React.FC<AvatarProps> = (props) => {
           </span>
         );
       }
-    } else if (type === "image" && src) {
+    } else if (type === 'image' && src) {
       if (imgtooltip && name) {
         return (
           <span
             className={`avatar avatar-${size} me-1 ${
-              status ? "avatar-indicators mb-2 mb-lg-0 avatar-" + status : ""
-            } ${bodyClasses ? bodyClasses : ""}`}
+              status ? 'avatar-indicators mb-2 mb-lg-0 avatar-' + status : ''
+            } ${bodyClasses ? bodyClasses : ''}`}
           >
             <DasherTippy content={name}>
               <Image
@@ -141,7 +141,7 @@ const Avatar: React.FC<AvatarProps> = (props) => {
         return (
           <span
             className={`avatar avatar-${size} me-0 ${
-              status ? "avatar-indicators mb-2 mb-lg-0 avatar-" + status : ""
+              status ? 'avatar-indicators mb-2 mb-lg-0 avatar-' + status : ''
             }`}
           >
             <Image
@@ -156,7 +156,7 @@ const Avatar: React.FC<AvatarProps> = (props) => {
       return (
         <span
           dangerouslySetInnerHTML={{
-            __html: "Required Avatar parameter not found",
+            __html: 'Required Avatar parameter not found',
           }}
         ></span>
       );
@@ -176,7 +176,7 @@ interface AvatarGroupProps {
 
 const AvatarGroup: React.FC<AvatarGroupProps> = (props) => {
   return (
-    <div className={`avatar-group ${props.className ? props.className : ""}`}>
+    <div className={`avatar-group ${props.className ? props.className : ''}`}>
       {props.children}
     </div>
   );

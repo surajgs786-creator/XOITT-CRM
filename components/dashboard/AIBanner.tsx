@@ -1,6 +1,6 @@
 //import node modules libraries
-import { Card, CardBody, Button, Image } from "react-bootstrap";
-import { getAssetPath } from "helper/assetPath";
+import { Card, CardBody, Button, Image } from 'react-bootstrap';
+import { getAssetPath } from 'helper/assetPath';
 
 const AIBanner = () => {
   return (
@@ -22,7 +22,7 @@ const AIBanner = () => {
             </Button>
           </div>
           <div>
-            <Image src={getAssetPath("/images/png/dasher-ai.png")} alt="" />
+            <Image src={getAssetPath('/images/png/dasher-ai.png')} alt="" />
           </div>
         </div>
       </CardBody>

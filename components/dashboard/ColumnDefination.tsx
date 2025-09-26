@@ -1,21 +1,21 @@
-"use client";
+'use client';
 //import node modules libraries
-import { ColumnDef } from "@tanstack/react-table";
-import { Badge, Dropdown } from "react-bootstrap";
-import { IconDotsVertical } from "@tabler/icons-react";
+import { ColumnDef } from '@tanstack/react-table';
+import { Badge, Dropdown } from 'react-bootstrap';
+import { IconDotsVertical } from '@tabler/icons-react';
 
 //import custom typs
-import { ProjectType } from "types/DashboardTypes";
+import { ProjectType } from 'types/DashboardTypes';
 
 //import custom components
-import ActionMenu from "components/common/ActionMenu";
-import { Avatar, AvatarGroup } from "components/common/Avatar";
-import CustomProgressBar from "components/common/CustomProgressBar";
+import ActionMenu from 'components/common/ActionMenu';
+import { Avatar, AvatarGroup } from 'components/common/Avatar';
+import CustomProgressBar from 'components/common/CustomProgressBar';
 
 export const ActiveProjectColumns: ColumnDef<ProjectType>[] = [
   {
-    accessorKey: "name",
-    header: "Name",
+    accessorKey: 'name',
+    header: 'Name',
     cell: ({ row }) => {
       const projectName = row.original.name;
       const deadline = row.original.deadline;
@@ -30,18 +30,18 @@ export const ActiveProjectColumns: ColumnDef<ProjectType>[] = [
   },
 
   {
-    accessorKey: "progress",
-    header: "Progress",
+    accessorKey: 'progress',
+    header: 'Progress',
     cell: ({ row }) => {
       const progress = row.original.progress;
       const barColor =
         progress < 30
-          ? "danger"
+          ? 'danger'
           : progress < 50
-          ? "warning"
-          : progress > 50 && progress < 90
-          ? "info"
-          : "primary";
+            ? 'warning'
+            : progress > 50 && progress < 90
+              ? 'info'
+              : 'primary';
       return (
         <>
           <div className="me-3">{`${progress}%`}</div>
@@ -50,7 +50,7 @@ export const ActiveProjectColumns: ColumnDef<ProjectType>[] = [
               now={progress}
               variant={barColor}
               className="progress-sm"
-              style={{ height: "5px" }}
+              style={{ height: '5px' }}
             />
           </div>
         </>
@@ -58,18 +58,18 @@ export const ActiveProjectColumns: ColumnDef<ProjectType>[] = [
     },
   },
   {
-    accessorKey: "stage",
-    header: "Stage",
+    accessorKey: 'stage',
+    header: 'Stage',
     cell: ({ row }) => {
       const statusText = row.original.status;
       const colorCode =
-        statusText === "Enquiry"
-          ? "info"
-          : statusText === "Proposal"
-          ? "danger"
-          : statusText === "Negotiation"
-          ? "warning"
-          : "primary";
+        statusText === 'Enquiry'
+          ? 'info'
+          : statusText === 'Proposal'
+            ? 'danger'
+            : statusText === 'Negotiation'
+              ? 'warning'
+              : 'primary';
       return (
         <Badge bg={`${colorCode}-subtle`} text={`${colorCode}-emphasis`}>
           {row.original.status}
@@ -78,18 +78,18 @@ export const ActiveProjectColumns: ColumnDef<ProjectType>[] = [
     },
   },
   {
-    accessorKey: "status",
-    header: "Status",
+    accessorKey: 'status',
+    header: 'Status',
     cell: ({ row }) => {
       const statusText = row.original.status;
       const colorCode =
-        statusText === "On Track"
-          ? "info"
-          : statusText === "Delayed"
-          ? "danger"
-          : statusText === "At Risk"
-          ? "warning"
-          : "primary";
+        statusText === 'On Track'
+          ? 'info'
+          : statusText === 'Delayed'
+            ? 'danger'
+            : statusText === 'At Risk'
+              ? 'warning'
+              : 'primary';
       return (
         <Badge bg={`${colorCode}-subtle`} text={`${colorCode}-emphasis`}>
           {row.original.status}
@@ -98,8 +98,8 @@ export const ActiveProjectColumns: ColumnDef<ProjectType>[] = [
     },
   },
   {
-    accessorKey: "assignedAvatars",
-    header: "Assigned",
+    accessorKey: 'assignedAvatars',
+    header: 'Assigned',
     cell: ({ row }) => {
       const avatars = row.original.assignedAvatars;
       const maxAvatarsToShow = 3;
@@ -108,12 +108,12 @@ export const ActiveProjectColumns: ColumnDef<ProjectType>[] = [
       const progress = row.original.progress;
       const bgColor =
         progress < 30
-          ? "danger"
+          ? 'danger'
           : progress < 50
-          ? "warning"
-          : progress > 50 && progress < 90
-          ? "info"
-          : "primary";
+            ? 'warning'
+            : progress > 50 && progress < 90
+              ? 'info'
+              : 'primary';
       return (
         <AvatarGroup>
           {displayedAvatars.map((avatar, index) => (
@@ -134,7 +134,7 @@ export const ActiveProjectColumns: ColumnDef<ProjectType>[] = [
     },
   },
   {
-    header: "Actions",
+    header: 'Actions',
     cell: () => {
       return (
         <ActionMenu

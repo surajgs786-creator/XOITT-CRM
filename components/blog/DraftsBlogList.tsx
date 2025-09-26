@@ -1,18 +1,18 @@
-"use client";
+'use client';
 //import node modules libraries
-import { Row, Col, Card, Form } from "react-bootstrap";
+import { Row, Col, Card, Form } from 'react-bootstrap';
 
 //import custom components
-import TanstackTable from "components/table/TanstackTable";
-import { blogListColumns } from "./ColumnDifinitions";
+import TanstackTable from 'components/table/TanstackTable';
+import { blogListColumns } from './ColumnDifinitions';
 
 //import required data files
-import { blogListData } from "data/BlogData";
+import { blogListData } from 'data/BlogData';
 
 const DraftsBlogList = () => {
   // Filter data based on the status
   const draftBlog = blogListData.filter(
-    (item) => item.post_status === "Drafts"
+    (item) => item.post_status === 'Drafts',
   );
 
   return (

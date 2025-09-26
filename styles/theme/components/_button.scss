@@ -119,7 +119,11 @@
 // Loop to generate subtle button variants for each theme color
 @each $color, $value in $theme-colors {
   .btn-subtle-#{$color} {
-    @include button-subtle-variant($value, rgba($value, $btn-soft-bg-opacity + 0.1), rgba($value, $btn-soft-bg-opacity + 0.2));
+    @include button-subtle-variant(
+      $value,
+      rgba($value, $btn-soft-bg-opacity + 0.1),
+      rgba($value, $btn-soft-bg-opacity + 0.2)
+    );
   }
 }
 

@@ -1,8 +1,8 @@
-"use client";
+'use client';
 // import node module libraries
-import { FormCheckType } from "react-bootstrap/esm/FormCheck";
-import { useRef, useEffect, InputHTMLAttributes } from "react";
-import { FormCheck } from "react-bootstrap";
+import { FormCheckType } from 'react-bootstrap/esm/FormCheck';
+import { useRef, useEffect, InputHTMLAttributes } from 'react';
+import { FormCheck } from 'react-bootstrap';
 
 interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
   indeterminate?: boolean;
@@ -12,14 +12,14 @@ interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
 
 const Checkbox = ({
   indeterminate,
-  className = "",
-  type = "checkbox",
+  className = '',
+  type = 'checkbox',
   ...rest
 }: CheckboxProps) => {
   const ref = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (typeof indeterminate === "boolean" && ref.current) {
+    if (typeof indeterminate === 'boolean' && ref.current) {
       ref.current.indeterminate = !rest.checked && indeterminate;
     }
   }, [ref, indeterminate, rest.checked]);

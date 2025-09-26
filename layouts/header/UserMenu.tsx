@@ -1,15 +1,15 @@
 //import node modules libraries
-import React from "react";
-import { Dropdown, Image } from "react-bootstrap";
-import Link from "next/link";
-import { IconLogin2 } from "@tabler/icons-react";
+import React from 'react';
+import { Dropdown, Image } from 'react-bootstrap';
+import Link from 'next/link';
+import { IconLogin2 } from '@tabler/icons-react';
 
 //import routes files
-import { UserMenuItem } from "routes/HeaderRoute";
+import { UserMenuItem } from 'routes/HeaderRoute';
 
 //import custom components
-import { Avatar } from "components/common/Avatar";
-import { getAssetPath } from "helper/assetPath";
+import { Avatar } from 'components/common/Avatar';
+import { getAssetPath } from 'helper/assetPath';
 
 interface UserToggleProps {
   children?: React.ReactNode;
@@ -20,7 +20,7 @@ const CustomToggle = React.forwardRef<HTMLAnchorElement, UserToggleProps>(
     <Link ref={ref} href="#" onClick={onClick}>
       {children}
     </Link>
-  )
+  ),
 );
 
 const UserMenu = () => {
@@ -29,7 +29,7 @@ const UserMenu = () => {
       <Dropdown.Toggle as={CustomToggle}>
         <Avatar
           type="image"
-          src={getAssetPath("/images/avatar/avatar-1.jpg")}
+          src={getAssetPath('/images/avatar/avatar-1.jpg')}
           size="sm"
           alt="User Avatar"
           className="rounded-circle"
@@ -38,7 +38,7 @@ const UserMenu = () => {
       <Dropdown.Menu align="end" className="p-0 dropdown-menu-md">
         <div className="d-flex gap-3 align-items-center border-dashed border-bottom px-4 py-4">
           <Image
-            src={getAssetPath("/images/avatar/avatar-1.jpg")}
+            src={getAssetPath('/images/avatar/avatar-1.jpg')}
             alt=""
             className="avatar avatar-md rounded-circle"
           />

@@ -1,12 +1,12 @@
 //import custom hooks
-import { useAppDispatch, useAppSelector } from "store/store";
+import { useAppDispatch, useAppSelector } from 'store/store';
 
 //import redux slices
 import {
   toggleMenu,
   setCollapsed,
   MenuToggleType,
-} from "store/slices/appSlice";
+} from 'store/slices/appSlice';
 
 const useMenu = () => {
   const showMenu = useAppSelector((state) => state.app.showMenu);

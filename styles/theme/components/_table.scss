@@ -64,5 +64,8 @@ th {
 
 .table-hover > tbody > tr:hover:has(.form-check-input:checked) > * {
   --ds-table-color-state: rgba(var(--#{$prefix}primary-rgb), $alpha: 1);
-  --ds-table-bg-state: rgba(var(--#{$prefix}primary-rgb), $alpha: 0.75); // Slightly darker on hover
+  --ds-table-bg-state: rgba(
+    var(--#{$prefix}primary-rgb),
+    $alpha: 0.75
+  ); // Slightly darker on hover
 }

@@ -1,11 +1,11 @@
 //import node modules libraries
-import React, { ReactNode } from "react";
-import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import React, { ReactNode } from 'react';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 interface DasherTippyProps {
   content: string | ReactNode;
   children: ReactNode;
-  placement?: "top" | "right" | "bottom" | "left";
+  placement?: 'top' | 'right' | 'bottom' | 'left';
   delayShow?: number;
   delayHide?: number;
   id?: string;
@@ -14,10 +14,10 @@ interface DasherTippyProps {
 const DasherTippy: React.FC<DasherTippyProps> = ({
   content,
   children,
-  placement = "top",
+  placement = 'top',
   delayShow = 250,
   delayHide = 400,
-  id = "custom-tooltip",
+  id = 'custom-tooltip',
 }) => {
   return (
     <OverlayTrigger
@@ -25,7 +25,7 @@ const DasherTippy: React.FC<DasherTippyProps> = ({
       delay={{ show: delayShow, hide: delayHide }}
       overlay={<Tooltip id={id}>{content}</Tooltip>}
     >
-      <span style={{ cursor: "pointer" }}>{children}</span>
+      <span style={{ cursor: 'pointer' }}>{children}</span>
     </OverlayTrigger>
   );
 };

@@ -1,8 +1,8 @@
 //import node modules libraries
-import React from "react";
-import { Navbar, Pagination } from "react-bootstrap";
-import { ChevronLeft, ChevronRight } from "react-feather";
-import { Table as ReactTable, RowData } from "@tanstack/react-table";
+import React from 'react';
+import { Navbar, Pagination } from 'react-bootstrap';
+import { ChevronLeft, ChevronRight } from 'react-feather';
+import { Table as ReactTable, RowData } from '@tanstack/react-table';
 
 interface TablePaginationProps<TData extends RowData> {
   table: ReactTable<TData>;
@@ -21,7 +21,7 @@ const TablePagination = <TData extends RowData>({
   return (
     <div className="border-top d-md-flex justify-content-between align-items-center p-3">
       <div>
-        Showing {pageIndex * pageSize + 1} to{" "}
+        Showing {pageIndex * pageSize + 1} to{' '}
         {Math.min((pageIndex + 1) * pageSize, totalRows)} of {totalRows} entries
       </div>
       <Navbar className="mt-2 mt-md-0">
@@ -31,7 +31,7 @@ const TablePagination = <TData extends RowData>({
             disabled={!table.getCanPreviousPage()}
             onClick={() => table.previousPage()}
           >
-            {hasIcon ? <ChevronLeft className="icon-xxs" /> : "Previous"}
+            {hasIcon ? <ChevronLeft className="icon-xxs" /> : 'Previous'}
           </Pagination.Item>
 
           {/* Page Numbers */}
@@ -50,7 +50,7 @@ const TablePagination = <TData extends RowData>({
             disabled={!table.getCanNextPage()}
             onClick={() => table.nextPage()}
           >
-            {hasIcon ? <ChevronRight className="icon-xxs" /> : "Next"}
+            {hasIcon ? <ChevronRight className="icon-xxs" /> : 'Next'}
           </Pagination.Item>
         </Pagination>
       </Navbar>

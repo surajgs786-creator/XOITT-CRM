@@ -1,13 +1,13 @@
-"use client";
+'use client';
 //import node modules libraries
-import { Card, CardBody, Badge, Form, Dropdown } from "react-bootstrap";
-import { IconDotsVertical } from "@tabler/icons-react";
+import { Card, CardBody, Badge, Form, Dropdown } from 'react-bootstrap';
+import { IconDotsVertical } from '@tabler/icons-react';
 
 //import custom components
-import ActionMenu from "components/common/ActionMenu";
+import ActionMenu from 'components/common/ActionMenu';
 
 //import required data files
-import { tasks } from "data/DashboardData";
+import { tasks } from 'data/DashboardData';
 
 const TaskList = () => {
   return (
@@ -16,7 +16,7 @@ const TaskList = () => {
         <div className="mb-4">
           <h5 className="mb-0">My Task</h5>
         </div>
-        <div style={{ height: "320px", overflowY: "auto" }}>
+        <div style={{ height: '320px', overflowY: 'auto' }}>
           {tasks.map((task) => (
             <div
               key={task.id}

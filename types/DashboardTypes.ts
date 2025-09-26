@@ -36,8 +36,8 @@ export interface ActivityLogType {
 export type Task = {
   id: string;
   title: string;
-  priority: "Low" | "Medium" | "High" | "Critical";
-  badgeVariant: "primary" | "warning" | "info" | "danger";
+  priority: 'Low' | 'Medium' | 'High' | 'Critical';
+  badgeVariant: 'primary' | 'warning' | 'info' | 'danger';
 };
 
 export interface EventType {
@@ -45,4 +45,9 @@ export interface EventType {
   date: string;
   time: string;
   platform: string;
+}
+
+export interface ActiveProjectsType {
+  status: string;
+  progress: number;
 }

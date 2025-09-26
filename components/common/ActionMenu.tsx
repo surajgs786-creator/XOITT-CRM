@@ -1,4 +1,4 @@
-"use client";
+'use client';
 /***************************
 Component : ActionMenu
 ****************************
@@ -18,9 +18,9 @@ Note: If you have specified both menuItems and children parameters, menuItems wi
 */
 
 // import node module libraries
-import Link from "next/link";
-import React, { Fragment } from "react";
-import { Dropdown } from "react-bootstrap";
+import Link from 'next/link';
+import React, { Fragment } from 'react';
+import { Dropdown } from 'react-bootstrap';
 
 interface CustomToggleProps {
   children: React.ReactNode;
@@ -30,12 +30,12 @@ interface CustomToggleProps {
 interface ActionMenuProps {
   toggleButton: React.ReactNode;
   className?: string;
-  align?: "start" | "end";
-  drop?: "up" | "up-centered" | "start" | "end" | "down" | "down-centered";
+  align?: 'start' | 'end';
+  drop?: 'up' | 'up-centered' | 'start' | 'end' | 'down' | 'down-centered';
   menuItems?: Array<{ link: string; menuItem: string; icon?: React.ReactNode }>;
   itemClass?: string;
   children?: React.ReactNode;
-  size?: "sm" | "lg" | undefined;
+  size?: 'sm' | 'lg' | undefined;
   variant?: string;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 }
@@ -43,8 +43,8 @@ interface ActionMenuProps {
 const ActionMenu: React.FC<ActionMenuProps> = ({
   toggleButton,
   className,
-  align = "end",
-  drop = "start",
+  align = 'end',
+  drop = 'start',
   menuItems = [],
   itemClass,
   children,
@@ -65,10 +65,10 @@ const ActionMenu: React.FC<ActionMenuProps> = ({
       >
         {children}
       </Link>
-    )
+    ),
   );
 
-  CustomToggle.displayName = "CustomToggle";
+  CustomToggle.displayName = 'CustomToggle';
 
   return (
     <Dropdown drop={drop}>
@@ -85,7 +85,7 @@ const ActionMenu: React.FC<ActionMenuProps> = ({
               className={itemClass}
               onClick={onClick}
             >
-              {item.icon ? item.icon : ""}
+              {item.icon ? item.icon : ''}
               {item.menuItem}
             </Dropdown.Item>
           ))

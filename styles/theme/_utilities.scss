@@ -1,14 +1,14 @@
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/variables-dark";
-@import "../../node_modules/bootstrap/scss/maps";
-@import "../../node_modules/bootstrap/scss/mixins";
-@import "../../node_modules/bootstrap/scss/utilities";
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/variables-dark';
+@import '../../node_modules/bootstrap/scss/maps';
+@import '../../node_modules/bootstrap/scss/mixins';
+@import '../../node_modules/bootstrap/scss/utilities';
 
 $utilities: map-merge(
   $utilities,
   (
-    "letter-spacing": (
+    'letter-spacing': (
       property: letter-spacing,
       class: ls,
       values: (
@@ -21,7 +21,7 @@ $utilities: map-merge(
         xxl: $letter-spacing-xxl,
       ),
     ),
-    "border": (
+    'border': (
       property: border,
       responsive: true,
       values: (
@@ -30,7 +30,7 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    "border-start": (
+    'border-start': (
       property: border-left,
       class: border-start,
       responsive: true,
@@ -40,7 +40,7 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    "border-end": (
+    'border-end': (
       property: border-right,
       class: border-end,
       responsive: true,
@@ -50,7 +50,7 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    "border-top": (
+    'border-top': (
       property: border-top,
       class: border-top,
       responsive: true,
@@ -60,7 +60,7 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    "border-bottom": (
+    'border-bottom': (
       property: border-bottom,
       class: border-bottom,
       responsive: true,
@@ -71,7 +71,7 @@ $utilities: map-merge(
       ),
     ),
 
-    "width": (
+    'width': (
       property: width,
       responsive: true,
       class: w,
@@ -92,68 +92,69 @@ $utilities: map-merge(
         auto: auto,
       ),
     ),
-    "background-color": (
+    'background-color': (
       property: background-color,
       class: bg,
       local-vars: (
-        "bg-opacity": 1,
+        'bg-opacity': 1,
       ),
-      values:
-        map-merge(
+      values: map-merge(
           $utilities-bg-colors,
           (
-            "transparent": transparent,
-            "body-secondary":
-              rgba(
+            'transparent': transparent,
+            'body-secondary': rgba(
                 var(--#{$prefix}secondary-bg-rgb),
                 var(--#{$prefix}bg-opacity)
               ),
-            "body-tertiary":
-              rgba(
+            'body-tertiary': rgba(
                 var(--#{$prefix}tertiary-bg-rgb),
                 var(--#{$prefix}bg-opacity)
               ),
-            "primary-lighter": rgba(#{$primary-100-rgb}, var(--ds-bg-opacity)),
-            "primary-light": rgba(#{$primary-300-rgb}, var(--ds-bg-opacity)),
-            "primary-dark": rgba(#{$primary-700-rgb}, var(--ds-bg-opacity)),
-            "primary-darker": rgba(#{$primary-900-rgb}, var(--ds-bg-opacity)),
-            "info-lighter": rgba(#{$info-100-rgb}, var(--ds-bg-opacity)),
-            "info-light": rgba(#{$info-300-rgb}, var(--ds-bg-opacity)),
-            "info-dark": rgba(#{$info-700-rgb}, var(--ds-bg-opacity)),
-            "info-darker": rgba(#{$info-900-rgb}, var(--ds-bg-opacity)),
-            "success-lighter": rgba(#{$success-100-rgb}, var(--ds-bg-opacity)),
-            "success-light": rgba(#{$success-300-rgb}, var(--ds-bg-opacity)),
-            "success-dark": rgba(#{$success-700-rgb}, var(--ds-bg-opacity)),
-            "success-darker": rgba(#{$success-900-rgb}, var(--ds-bg-opacity)),
-            "danger-lighter": rgba(#{$danger-100-rgb}, var(--ds-bg-opacity)),
-            "danger-light": rgba(#{$danger-300-rgb}, var(--ds-bg-opacity)),
-            "danger-dark": rgba(#{$danger-700-rgb}, var(--ds-bg-opacity)),
-            "danger-darker": rgba(#{$danger-900-rgb}, var(--ds-bg-opacity)),
-            "warning-lighter": rgba(#{$warning-100-rgb}, var(--ds-bg-opacity)),
-            "warning-light": rgba(#{$warning-300-rgb}, var(--ds-bg-opacity)),
-            "warning-dark": rgba(#{$warning-700-rgb}, var(--ds-bg-opacity)),
-            "warning-darker": rgba(#{$warning-900-rgb}, var(--ds-bg-opacity)),
-            "secondary-lighter":
-              rgba(#{$secondary-100-rgb}, var(--ds-bg-opacity)),
-            "secondary-light": rgba(#{$secondary-300-rgb}, var(--ds-bg-opacity)),
-            "secondary-dark": rgba(#{$secondary-700-rgb}, var(--ds-bg-opacity)),
-            "secondary-darker":
-              rgba(#{$secondary-900-rgb}, var(--ds-bg-opacity)),
-            "gray-50": $gray-50,
-            "gray-100": $gray-100,
-            "gray-200": $gray-200,
-            "gray-300": $gray-300,
-            "gray-400": $gray-400,
-            "gray-500": $gray-500,
-            "gray-600": $gray-600,
-            "gray-700": $gray-700,
-            "gray-800": $gray-800,
-            "gray-900": $gray-900,
-            "bg-gradient": $gradient,
+            'primary-lighter': rgba(#{$primary-100-rgb}, var(--ds-bg-opacity)),
+            'primary-light': rgba(#{$primary-300-rgb}, var(--ds-bg-opacity)),
+            'primary-dark': rgba(#{$primary-700-rgb}, var(--ds-bg-opacity)),
+            'primary-darker': rgba(#{$primary-900-rgb}, var(--ds-bg-opacity)),
+            'info-lighter': rgba(#{$info-100-rgb}, var(--ds-bg-opacity)),
+            'info-light': rgba(#{$info-300-rgb}, var(--ds-bg-opacity)),
+            'info-dark': rgba(#{$info-700-rgb}, var(--ds-bg-opacity)),
+            'info-darker': rgba(#{$info-900-rgb}, var(--ds-bg-opacity)),
+            'success-lighter': rgba(#{$success-100-rgb}, var(--ds-bg-opacity)),
+            'success-light': rgba(#{$success-300-rgb}, var(--ds-bg-opacity)),
+            'success-dark': rgba(#{$success-700-rgb}, var(--ds-bg-opacity)),
+            'success-darker': rgba(#{$success-900-rgb}, var(--ds-bg-opacity)),
+            'danger-lighter': rgba(#{$danger-100-rgb}, var(--ds-bg-opacity)),
+            'danger-light': rgba(#{$danger-300-rgb}, var(--ds-bg-opacity)),
+            'danger-dark': rgba(#{$danger-700-rgb}, var(--ds-bg-opacity)),
+            'danger-darker': rgba(#{$danger-900-rgb}, var(--ds-bg-opacity)),
+            'warning-lighter': rgba(#{$warning-100-rgb}, var(--ds-bg-opacity)),
+            'warning-light': rgba(#{$warning-300-rgb}, var(--ds-bg-opacity)),
+            'warning-dark': rgba(#{$warning-700-rgb}, var(--ds-bg-opacity)),
+            'warning-darker': rgba(#{$warning-900-rgb}, var(--ds-bg-opacity)),
+            'secondary-lighter': rgba(
+                #{$secondary-100-rgb},
+                var(--ds-bg-opacity)
+              ),
+            'secondary-light': rgba(#{$secondary-300-rgb}, var(--ds-bg-opacity)),
+            'secondary-dark': rgba(#{$secondary-700-rgb}, var(--ds-bg-opacity)),
+            'secondary-darker': rgba(
+                #{$secondary-900-rgb},
+                var(--ds-bg-opacity)
+              ),
+            'gray-50': $gray-50,
+            'gray-100': $gray-100,
+            'gray-200': $gray-200,
+            'gray-300': $gray-300,
+            'gray-400': $gray-400,
+            'gray-500': $gray-500,
+            'gray-600': $gray-600,
+            'gray-700': $gray-700,
+            'gray-800': $gray-800,
+            'gray-900': $gray-900,
+            'bg-gradient': $gradient,
           )
         ),
     ),
-    "bg-opacity": (
+    'bg-opacity': (
       css-var: true,
       class: bg-opacity,
       values: (
@@ -164,68 +165,75 @@ $utilities: map-merge(
         100: 1,
       ),
     ),
-    "subtle-background-color": (
+    'subtle-background-color': (
       property: background-color,
       class: bg,
       values: $utilities-bg-subtle,
     ),
-    "color": (
+    'color': (
       property: color,
       class: text,
       local-vars: (
-        "text-opacity": 1,
+        'text-opacity': 1,
       ),
-      values:
-        map-merge(
+      values: map-merge(
           $utilities-text-colors,
           (
-            "black-50": rgba($black, 0.5),
+            'black-50': rgba($black, 0.5),
             // deprecated
-            "white-50": rgba($white, 0.5),
+            'white-50': rgba($white, 0.5),
             // deprecated
-            "reset": inherit,
-            "primary-lighter": rgba(#{$primary-100-rgb}, var(--ds-text-opacity)),
-            "primary-light": rgba(#{$primary-300-rgb}, var(--ds-text-opacity)),
-            "primary-dark": rgba(#{$primary-700-rgb}, var(--ds-text-opacity)),
-            "primary-darker": rgba(#{$primary-900-rgb}, var(--ds-text-opacity)),
-            "info-lighter": rgba(#{$info-100-rgb}, var(--ds-text-opacity)),
-            "info-light": rgba(#{$info-300-rgb}, var(--ds-text-opacity)),
-            "info-dark": rgba(#{$info-700-rgb}, var(--ds-text-opacity)),
-            "info-darker": rgba(#{$info-900-rgb}, var(--ds-text-opacity)),
-            "success-lighter": rgba(#{$success-100-rgb}, var(--ds-text-opacity)),
-            "success-light": rgba(#{$success-300-rgb}, var(--ds-text-opacity)),
-            "success-dark": rgba(#{$success-700-rgb}, var(--ds-text-opacity)),
-            "success-darker": rgba(#{$success-900-rgb}, var(--ds-text-opacity)),
-            "danger-lighter": rgba(#{$danger-100-rgb}, var(--ds-text-opacity)),
-            "danger-light": rgba(#{$danger-300-rgb}, var(--ds-text-opacity)),
-            "danger-dark": rgba(#{$danger-700-rgb}, var(--ds-text-opacity)),
-            "danger-darker": rgba(#{$danger-900-rgb}, var(--ds-text-opacity)),
-            "warning-lighter": rgba(#{$warning-100-rgb}, var(--ds-text-opacity)),
-            "warning-light": rgba(#{$warning-300-rgb}, var(--ds-text-opacity)),
-            "warning-dark": rgba(#{$warning-700-rgb}, var(--ds-text-opacity)),
-            "warning-darker": rgba(#{$warning-900-rgb}, var(--ds-text-opacity)),
-            "secondary-lighter":
-              rgba(#{$secondary-100-rgb}, var(--ds-text-opacity)),
-            "secondary-light":
-              rgba(#{$secondary-300-rgb}, var(--ds-text-opacity)),
-            "secondary-dark":
-              rgba(#{$secondary-700-rgb}, var(--ds-text-opacity)),
-            "secondary-darker":
-              rgba(#{$secondary-900-rgb}, var(--ds-text-opacity)),
-            "gray-50": $gray-50,
-            "gray-100": $gray-100,
-            "gray-200": $gray-200,
-            "gray-300": $gray-300,
-            "gray-400": $gray-400,
-            "gray-500": $gray-500,
-            "gray-600": $gray-600,
-            "gray-700": $gray-700,
-            "gray-800": $gray-800,
-            "gray-900": $gray-900,
+            'reset': inherit,
+            'primary-lighter': rgba(#{$primary-100-rgb}, var(--ds-text-opacity)),
+            'primary-light': rgba(#{$primary-300-rgb}, var(--ds-text-opacity)),
+            'primary-dark': rgba(#{$primary-700-rgb}, var(--ds-text-opacity)),
+            'primary-darker': rgba(#{$primary-900-rgb}, var(--ds-text-opacity)),
+            'info-lighter': rgba(#{$info-100-rgb}, var(--ds-text-opacity)),
+            'info-light': rgba(#{$info-300-rgb}, var(--ds-text-opacity)),
+            'info-dark': rgba(#{$info-700-rgb}, var(--ds-text-opacity)),
+            'info-darker': rgba(#{$info-900-rgb}, var(--ds-text-opacity)),
+            'success-lighter': rgba(#{$success-100-rgb}, var(--ds-text-opacity)),
+            'success-light': rgba(#{$success-300-rgb}, var(--ds-text-opacity)),
+            'success-dark': rgba(#{$success-700-rgb}, var(--ds-text-opacity)),
+            'success-darker': rgba(#{$success-900-rgb}, var(--ds-text-opacity)),
+            'danger-lighter': rgba(#{$danger-100-rgb}, var(--ds-text-opacity)),
+            'danger-light': rgba(#{$danger-300-rgb}, var(--ds-text-opacity)),
+            'danger-dark': rgba(#{$danger-700-rgb}, var(--ds-text-opacity)),
+            'danger-darker': rgba(#{$danger-900-rgb}, var(--ds-text-opacity)),
+            'warning-lighter': rgba(#{$warning-100-rgb}, var(--ds-text-opacity)),
+            'warning-light': rgba(#{$warning-300-rgb}, var(--ds-text-opacity)),
+            'warning-dark': rgba(#{$warning-700-rgb}, var(--ds-text-opacity)),
+            'warning-darker': rgba(#{$warning-900-rgb}, var(--ds-text-opacity)),
+            'secondary-lighter': rgba(
+                #{$secondary-100-rgb},
+                var(--ds-text-opacity)
+              ),
+            'secondary-light': rgba(
+                #{$secondary-300-rgb},
+                var(--ds-text-opacity)
+              ),
+            'secondary-dark': rgba(
+                #{$secondary-700-rgb},
+                var(--ds-text-opacity)
+              ),
+            'secondary-darker': rgba(
+                #{$secondary-900-rgb},
+                var(--ds-text-opacity)
+              ),
+            'gray-50': $gray-50,
+            'gray-100': $gray-100,
+            'gray-200': $gray-200,
+            'gray-300': $gray-300,
+            'gray-400': $gray-400,
+            'gray-500': $gray-500,
+            'gray-600': $gray-600,
+            'gray-700': $gray-700,
+            'gray-800': $gray-800,
+            'gray-900': $gray-900,
           )
         ),
     ),
-    "text-opacity": (
+    'text-opacity': (
       css-var: true,
       class: text-opacity,
       values: (
@@ -237,8 +245,7 @@ $utilities: map-merge(
     ),
 
     // scss-docs-start utils-shadow
-    "shadow":
-      (
+    'shadow': (
         property: box-shadow,
         class: shadow,
         values: (
@@ -255,17 +262,17 @@ $utilities: map-merge(
           none: none,
         ),
       ),
-    "overflow": (
+    'overflow': (
       property: overflow,
       responsive: true,
       values: auto hidden visible scroll,
     ),
-    "overflow-x": (
+    'overflow-x': (
       property: overflow-x,
       responsive: true,
       values: auto hidden visible scroll,
     ),
-    "overflow-y": (
+    'overflow-y': (
       property: overflow-y,
       responsive: true,
       values: auto hidden visible scroll,
@@ -274,11 +281,11 @@ $utilities: map-merge(
   )
 );
 
-@import "../../node_modules/bootstrap/scss/utilities/api";
+@import '../../node_modules/bootstrap/scss/utilities/api';
 // Utilities classes
-@import "./utilities/_text.scss";
-@import "./utilities/_icon-shape.scss";
-@import "./utilities/_border.scss";
-@import "./utilities/_simplebar.scss";
+@import './utilities/_text.scss';
+@import './utilities/_icon-shape.scss';
+@import './utilities/_border.scss';
+@import './utilities/_simplebar.scss';
 
-@import "./utilities/_background.scss";
+@import './utilities/_background.scss';

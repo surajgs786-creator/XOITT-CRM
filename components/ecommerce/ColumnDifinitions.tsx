@@ -1,20 +1,20 @@
 //import node module libraries
-import { Fragment } from "react";
-import { ColumnDef } from "@tanstack/react-table";
-import { IconEdit, IconEye, IconTrash } from "@tabler/icons-react";
-import { Badge, Button, Image } from "react-bootstrap";
-import Link from "next/link";
+import { Fragment } from 'react';
+import { ColumnDef } from '@tanstack/react-table';
+import { IconEdit, IconEye, IconTrash } from '@tabler/icons-react';
+import { Badge, Button, Image } from 'react-bootstrap';
+import Link from 'next/link';
 
 //import custom types
-import { ProductListType } from "types/EcommerceType";
+import { ProductListType } from 'types/EcommerceType';
 
 //import custom components
-import DasherTippy from "components/common/DasherTippy";
-import Checkbox from "components/table/Checkbox";
+import DasherTippy from 'components/common/DasherTippy';
+import Checkbox from 'components/table/Checkbox';
 
 export const productListColumns: ColumnDef<ProductListType>[] = [
   {
-    id: "select",
+    id: 'select',
     header: ({ table }) => {
       return (
         <Checkbox
@@ -40,8 +40,8 @@ export const productListColumns: ColumnDef<ProductListType>[] = [
     ),
   },
   {
-    accessorKey: "name",
-    header: "Product",
+    accessorKey: 'name',
+    header: 'Product',
     cell: ({ row }) => {
       return (
         <div className="d-flex align-items-center">
@@ -61,31 +61,31 @@ export const productListColumns: ColumnDef<ProductListType>[] = [
     },
   },
   {
-    accessorKey: "category",
-    header: "Category",
+    accessorKey: 'category',
+    header: 'Category',
   },
   {
-    accessorKey: "addedDate",
-    header: "Added Date",
+    accessorKey: 'addedDate',
+    header: 'Added Date',
   },
   {
-    accessorKey: "price",
-    header: "Price",
+    accessorKey: 'price',
+    header: 'Price',
   },
   {
-    accessorKey: "quantity",
-    header: "Quantity",
+    accessorKey: 'quantity',
+    header: 'Quantity',
   },
   {
-    accessorKey: "status",
-    header: "Status",
+    accessorKey: 'status',
+    header: 'Status',
     cell: ({ row }) => {
       const statusText = row.original.status;
       return (
         <Badge
-          bg={`${statusText === "Active" ? "success-subtle" : "danger-subtle"}`}
+          bg={`${statusText === 'Active' ? 'success-subtle' : 'danger-subtle'}`}
           text={`${
-            statusText === "Active" ? "success-emphasis" : "danger-emphasis"
+            statusText === 'Active' ? 'success-emphasis' : 'danger-emphasis'
           }`}
           pill={true}
         >
@@ -95,8 +95,8 @@ export const productListColumns: ColumnDef<ProductListType>[] = [
     },
   },
   {
-    accessorKey: "",
-    header: "Action",
+    accessorKey: '',
+    header: 'Action',
     cell: () => {
       return (
         <Fragment>

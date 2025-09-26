@@ -1,5 +1,5 @@
 //import node modules libraries
-import { Container } from "react-bootstrap";
+import { Container } from 'react-bootstrap';
 
 const ErrorLayout = ({ children }: { children: React.ReactNode }) => {
   return (

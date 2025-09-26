@@ -1,19 +1,19 @@
-"use client";
+'use client';
 //import node modules libraries
-import SimpleBar from "simplebar-react";
-import { ListGroup, Nav, Offcanvas, Tab, Button } from "react-bootstrap";
-import Link from "next/link";
+import SimpleBar from 'simplebar-react';
+import { ListGroup, Nav, Offcanvas, Tab, Button } from 'react-bootstrap';
+import Link from 'next/link';
 
 //import custom components
-import Flex from "./Flex";
+import Flex from './Flex';
 import {
   IconCalendarWeek,
   IconChecks,
   IconCircleFilled,
   IconSettings,
   IconShoppingCart,
-} from "@tabler/icons-react";
-import { Avatar } from "./Avatar";
+} from '@tabler/icons-react';
+import { Avatar } from './Avatar';
 
 interface NotificationProps {
   isOpen: boolean;
@@ -43,26 +43,26 @@ const NoficationList: React.FC<NotificationProps> = ({ isOpen, onClose }) => {
 
       {/* Tab Content Start */}
       <div className="mt-2">
-        <Tab.Container defaultActiveKey={"0"}>
-          <Nav className="nav-line-bottom" defaultActiveKey={"0"}>
+        <Tab.Container defaultActiveKey={'0'}>
+          <Nav className="nav-line-bottom" defaultActiveKey={'0'}>
             <Nav.Item>
-              <Nav.Link role="button" eventKey={"0"}>
+              <Nav.Link role="button" eventKey={'0'}>
                 All
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link role="button" eventKey={"1"}>
+              <Nav.Link role="button" eventKey={'1'}>
                 Following
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link role="button" eventKey={"2"}>
+              <Nav.Link role="button" eventKey={'2'}>
                 Archive
               </Nav.Link>
             </Nav.Item>
           </Nav>
           <Tab.Content id="pills-tabContent">
-            <Tab.Pane eventKey={"0"}>
+            <Tab.Pane eventKey={'0'}>
               <SimpleBar style={{ maxHeight: 450 }}>
                 <ListGroup variant="flush">
                   <ListGroup.Item
@@ -233,7 +233,7 @@ const NoficationList: React.FC<NotificationProps> = ({ isOpen, onClose }) => {
                 </ListGroup>
               </SimpleBar>
             </Tab.Pane>
-            <Tab.Pane eventKey={"1"}>
+            <Tab.Pane eventKey={'1'}>
               <SimpleBar style={{ maxHeight: 450 }}>
                 <ListGroup variant="flush">
                   <ListGroup.Item
@@ -370,7 +370,7 @@ const NoficationList: React.FC<NotificationProps> = ({ isOpen, onClose }) => {
                 </ListGroup>
               </SimpleBar>
             </Tab.Pane>
-            <Tab.Pane eventKey={"2"}>
+            <Tab.Pane eventKey={'2'}>
               <SimpleBar style={{ maxHeight: 450 }}>
                 <ListGroup variant="flush">
                   <ListGroup.Item

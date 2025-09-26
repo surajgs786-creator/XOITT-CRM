@@ -1,13 +1,8 @@
-"use client";
+'use client';
 //import node modules libraries
-import { Card, CardHeader, CardFooter, Button } from "react-bootstrap";
-import { Doughnut } from "react-chartjs-2";
-import {
-  Chart as ChartJS,
-  ArcElement,
-  Tooltip,
-  Legend
-} from "chart.js";
+import { Card, CardHeader, CardFooter, Button } from 'react-bootstrap';
+import { Doughnut } from 'react-chartjs-2';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -16,20 +11,20 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 // import { ActiveProjectColumns } from "components/dashboard/ColumnDefination";
 
 //import required data files
-import { activeProject } from "data/DashboardData";
+import { activeProject } from 'data/DashboardData';
+import { ActiveProjectsType } from 'types/DashboardTypes';
 
-
-const getStatusAndProgress = (data: any[]) => {
+const getStatusAndProgress = (data: ActiveProjectsType[]) => {
   // Example: expects data to have [{ status: 'Open', progress: 30 }, ...]
   const statusMap: Record<string, number> = {};
-  data.forEach(item => {
+  data.forEach((item) => {
     if (item.status && typeof item.progress === 'number') {
       statusMap[item.status] = (statusMap[item.status] || 0) + item.progress;
     }
   });
   return {
     labels: Object.keys(statusMap),
-    values: Object.values(statusMap)
+    values: Object.values(statusMap),
   };
 };
 
@@ -58,7 +53,10 @@ const ActiveProject = () => {
       <CardHeader className="border-bottom-0">
         <h5 className="mb-0">Active Leads</h5>
       </CardHeader>
-      <div className="d-flex flex-column align-items-center justify-content-center" style={{ minHeight: 180 }}>
+      <div
+        className="d-flex flex-column align-items-center justify-content-center"
+        style={{ minHeight: 180 }}
+      >
         <div style={{ width: 180, height: 180 }}>
           <Doughnut
             data={chartData}

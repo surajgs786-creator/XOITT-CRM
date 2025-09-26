@@ -1,6 +1,6 @@
 export const settings = {
   theme: {
-    skin: "dark",
+    skin: 'dark',
   },
 };
 export default { settings };
