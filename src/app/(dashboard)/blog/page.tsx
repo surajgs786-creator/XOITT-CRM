@@ -20,4 +20,5 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+// File removed as part of Blog removal
+export default null; // Exporting null as the Blog component is removed

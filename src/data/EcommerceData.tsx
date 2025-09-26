@@ -2,10 +2,7 @@
 import { v4 as uuid } from 'uuid';
 
 //import custom types
-import { ProductListType } from 'src/types/EcommerceType';
-import { getAssetPath } from 'src/helper/assetPath';
 
-export const productListData: ProductListType[] = [
   {
     id: uuid(),
     name: 'Transparent Sunglasses',

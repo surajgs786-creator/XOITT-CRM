@@ -45,4 +45,4 @@ const PublishedBlogList = () => {
   );
 };
 
-export default PublishedBlogList;
+// File removed as part of Blog removal

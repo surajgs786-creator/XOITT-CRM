@@ -41,4 +41,5 @@ const DraftsBlogList = () => {
   );
 };
 
-export default DraftsBlogList;
+// File removed as part of Blog removal
+export default null; // or simply remove this line if not needed

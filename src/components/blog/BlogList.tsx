@@ -83,5 +83,4 @@ const BlogList = () => {
     </Row>
   );
 };
-
-export default BlogList;
+// File removed as part of Blog removal

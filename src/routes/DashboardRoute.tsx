@@ -33,18 +33,8 @@ export const DashboardMenu: MenuItemType[] = [
       },
     ],
   },
-  {
-    id: uuid(),
-    title: 'Ecommerce',
-    link: '/ecommerce',
-    icon: <IconShoppingBag size={20} strokeWidth={1.5} />,
-  },
-  {
-    id: uuid(),
-    title: 'Blog',
-    link: '/blog',
-    icon: <IconNews size={20} strokeWidth={1.5} />,
-  },
+  // Ecommerce menu removed
+  // Blog menu removed
   {
     id: uuid(),
     title: 'Auth',

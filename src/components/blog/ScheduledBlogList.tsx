@@ -43,4 +43,4 @@ const ScheduledBlogList = () => {
   );
 };
 
-export default ScheduledBlogList;
+// File removed as part of Blog removal

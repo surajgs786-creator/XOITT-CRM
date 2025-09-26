@@ -20,4 +20,5 @@ const Ecommerce = () => {
   );
 };
 
-export default Ecommerce;
+// File removed as part of Ecommerce removal
+// export default Ecommerce;
