@@ -6,10 +6,12 @@ import {
   IconNews,
   IconFile,
   IconLock,
+  IconTarget,
+  IconTargetArrow,
 } from '@tabler/icons-react';
 
 //import custom type
-import { MenuItemType } from 'types/menuTypes';
+import { MenuItemType } from 'src/types/menuTypes';
 
 export const DashboardMenu: MenuItemType[] = [
   {
@@ -17,6 +19,19 @@ export const DashboardMenu: MenuItemType[] = [
     title: 'Dashboard',
     link: '/',
     icon: <IconFiles size={20} strokeWidth={1.5} />,
+  },
+  {
+    id: uuid(),
+    title: 'Sales',
+    icon: <IconTargetArrow size={20} strokeWidth={1.5} />,
+    children: [
+      {
+        id: uuid(),
+        name: 'Leads',
+        link: 'leads',
+        icon: <IconTarget size={20} strokeWidth={1.5} />,
+      },
+    ],
   },
   {
     id: uuid(),

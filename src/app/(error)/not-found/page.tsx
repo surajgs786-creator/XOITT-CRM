@@ -1,5 +1,5 @@
 //import node modules libraries
-import { getAssetPath } from 'helper/assetPath';
+import { getAssetPath } from 'src/helper/assetPath';
 import { Metadata } from 'next';
 import { Fragment } from 'react';
 import { Button, Col, Image, Row } from 'react-bootstrap';
