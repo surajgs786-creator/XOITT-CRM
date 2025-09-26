@@ -20,7 +20,7 @@ import {
 export const DashboardStatsData: DashboardStatType[] = [
   {
     id: uuid(),
-    title: 'Deals',
+    title: 'Leads',
     value: '6',
     icon: <IconBriefcase size={24} strokeWidth={1.5} />,
     bgColor: 'bg-gradient-success',

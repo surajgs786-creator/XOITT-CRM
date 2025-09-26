@@ -1,11 +1,22 @@
+
+'use client'
 //import node module libraries
+
+
 import { Row, Col, Button } from 'react-bootstrap';
 import { IconPlus } from '@tabler/icons-react';
+import { useRouter } from 'next/navigation';// Import useNavigate
 
 //import custom components
 import Flex from 'src/components/common/Flex';
 
 const LeadsHeader = () => {
+  const router = useRouter(); // Initialize useNavigate
+
+  const handleNewLeadClick = () => {
+    router.push('/leads/new'); // Navigate to the New Lead page
+  };
+
   return (
     <Row>
       <Col>
@@ -20,9 +31,9 @@ const LeadsHeader = () => {
           </div>
           <div>
             <Button
-              href="#"
+              onClick={handleNewLeadClick} // Add onClick handler
               variant="dark"
-              className=" d-md-flex align-items-center gap-2"
+              className="d-md-flex align-items-center gap-2"
             >
               <IconPlus size={18} />
               New Leads
