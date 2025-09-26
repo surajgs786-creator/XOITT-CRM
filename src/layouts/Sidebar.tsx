@@ -258,22 +258,6 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
               }
             }
           })}
-          <NavItem as="li" bsPrefix="">
-            <div className="text-center py-5 upgrade-ui">
-              <div>
-                <Avatar
-                  type="image"
-                  src={getAssetPath('/images/avatar/avatar-1.jpg')}
-                  size="md"
-                  className="rounded-circle"
-                />
-                <div className="my-3">
-                  <h5 className="mb-1 fs-6">Jitu Chauhan</h5>
-                  <span className="text-secondary">Free Version - 1 Month</span>
-                </div>
-              </div>
-            </div>
-          </NavItem>
         </Accordion>
       </div>
     </div>

@@ -29,7 +29,16 @@ export const DashboardMenu: MenuItemType[] = [
         id: uuid(),
         name: 'Leads',
         link: 'leads',
-        icon: <IconTarget size={20} strokeWidth={1.5} />,
+      },
+      {
+        id: uuid(),
+        name: 'Contacts',
+        link: 'contacts',
+      },
+      {
+        id: uuid(),
+        name: 'Deals',
+        link: 'deals',
       },
     ],
   },
@@ -50,20 +59,5 @@ export const DashboardMenu: MenuItemType[] = [
     title: 'Auth',
     link: '/sign-in',
     icon: <IconLock size={20} strokeWidth={1.5} />,
-  },
-
-  {
-    id: uuid(),
-    title: 'Pages',
-    grouptitle: true,
-  },
-  {
-    id: uuid(),
-    title: 'Pages',
-    icon: <IconFile size={20} strokeWidth={1.5} />,
-    children: [
-      { id: uuid(), name: 'Maintenance', link: 'maintenance' },
-      { id: uuid(), name: '404 Error', link: 'not-found' },
-    ],
   },
 ];
