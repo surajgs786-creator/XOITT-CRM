@@ -27,15 +27,15 @@
   gap: 0.5rem;
   z-index: 10;
   position: absolute;
-  top: 16px;
-  right: 24px;
+  top: 0;
+  right: 0;
 }
 
 
 .custom-swiper-prev,
 .custom-swiper-next {
-  width: 36px;
-  height: 36px;
+  width: 2rem;
+  height: 2rem;
   background: #f1f3f4;
   border-radius: 50%;
   display: flex;

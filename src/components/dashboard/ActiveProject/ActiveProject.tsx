@@ -78,7 +78,7 @@ const ActiveProject = () => {
       </div>
       <CardFooter className=" border-dashed border-top text-center">
         <Button href="#!" variant="link">
-          View All Projects
+          View All Leads
         </Button>
       </CardFooter>
     </Card>

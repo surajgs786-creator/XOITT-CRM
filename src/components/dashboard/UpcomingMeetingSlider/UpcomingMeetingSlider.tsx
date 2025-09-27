@@ -1,4 +1,3 @@
-'use client';
 //import node modules libraries
 import { useState } from 'react';
 import { Button, Card, CardBody, Image } from 'react-bootstrap';
@@ -9,6 +8,8 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 //import required data files
 import { EventList } from '../../../data/DashboardData';
 import { getAssetPath } from '../../../helper/assetPath';
+
+import './UpcomingMeetingSlider.scss';
 
 const UpcomingMeetingSlider = () => {
 

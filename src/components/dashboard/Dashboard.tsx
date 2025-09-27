@@ -66,7 +66,7 @@ const Dashboard: React.FC = () => {
   <DashboardStats />
       </Row>
       <Row className="g-6 mb-6">
-        <Col xl={5} style={{ display: 'flex', flexDirection: 'column', maxHeight: 600 }}>
+        <Col xl={4} style={{ display: 'flex', flexDirection: 'column', maxHeight: 600 }}>
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'stretch' }}>
             <Suspense fallback={<LoadingSpinner />}>
               <TaskProgress />
@@ -80,7 +80,7 @@ const Dashboard: React.FC = () => {
             </Suspense>
           </div>
         </Col>
-        <Col xl={3} style={{ display: 'flex', flexDirection: 'column', maxHeight: 600 }}>
+        <Col xl={4} style={{ display: 'flex', flexDirection: 'column', maxHeight: 600 }}>
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'stretch' }}>
             <Suspense fallback={<LoadingSpinner />}>
               <UpcomingMeetingSlider />
