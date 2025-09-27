@@ -1,3 +1,59 @@
-.upcoming-meeting-slider {
-  // UpcomingMeetingSlider styles
+
+
+.blog-swiper {
+  width: 100% !important;
 }
+
+.swiper {
+  width: 100% !important;
+  height: auto !important;
+}
+
+
+
+.swiper-slide {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.meeting-card, .card.border {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Style navigation arrows */
+.swiper-navigation {
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+  position: absolute;
+  top: 16px;
+  right: 24px;
+}
+
+
+.custom-swiper-prev,
+.custom-swiper-next {
+  width: 36px;
+  height: 36px;
+  background: #f1f3f4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  color: #888;
+  font-size: 18px;
+  border: none;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+}
+.custom-swiper-prev:hover,
+.custom-swiper-next:hover {
+  background: #e0e0e0;
+  color: #222;
+}
+
+
