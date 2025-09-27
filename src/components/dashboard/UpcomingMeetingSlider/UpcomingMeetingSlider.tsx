@@ -24,11 +24,21 @@ const UpcomingMeetingSlider = () => {
 
         <div className="d-flex align-items-center justify-content-between mb-4 py-2 position-relative" style={{ zIndex: 2 }}>
           <h5 className="mb-1">Upcoming Meetings</h5>
-          <div className="swiper-navigation">
-            <button className="custom-swiper-prev" onClick={goPrev} type="button" aria-label="Previous">
+          <div className="d-flex align-items-center gap-2">
+            <button
+              className="btn btn-outline-secondary btn-sm"
+              onClick={goPrev}
+              type="button"
+              aria-label="Previous"
+            >
               <FontAwesomeIcon icon={faChevronLeft} size="sm" />
             </button>
-            <button className="custom-swiper-next" onClick={goNext} type="button" aria-label="Next">
+            <button
+              className="btn btn-outline-secondary btn-sm"
+              onClick={goNext}
+              type="button"
+              aria-label="Next"
+            >
               <FontAwesomeIcon icon={faChevronRight} size="sm" />
             </button>
           </div>
