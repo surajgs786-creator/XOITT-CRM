@@ -39,16 +39,18 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
-$blue: #00a76f !default;
+$blue: #083d44 !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
 $red: #ff5630 !default;
 $orange: #fd7e14 !default;
 $yellow: #ffab00 !default;
-$green: #22c55e !default;
-$teal: #20c997 !default;
+$green: #0d6672 !default;
+$teal: #1290a1 !default;
 $cyan: #00b8d9 !default;
+$darkteal:#083d44 !default;
+
 // scss-docs-end color-variables
 
 // scss-docs-start theme-color-variables
@@ -65,7 +67,7 @@ $dark: $gray-900 !default;
 
 // scss-docs-end theme-color-variables
 // primary
-$primary-100: #c8fad6 !default;
+$primary-100: #14a5b8 !default;
 $primary-100-rgb:
   #{color.channel($primary-100, "red", $space: rgb)},
   #{color.channel($primary-100, "green", $space: rgb)},

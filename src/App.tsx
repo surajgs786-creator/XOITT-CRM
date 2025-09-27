@@ -9,11 +9,10 @@ import Header from './layouts/header/Header';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import Flex from './components/common/Flex';
-
-import SignIn from './pages/SignIn';
 import LeadPage from './pages/leads';
 import SignUpPage from './pages/signup';
 import LeadDetailsPage from './pages/leads/leadDetails';
+import SignInPage from './pages/signin';
 
 function App() {
   return (
@@ -35,7 +34,7 @@ function App() {
                 <Route path="/leadDetails?action=View" element={<LeadDetailsPage/>} />
                 <Route path="/deals" element={<DealsPage />} />
                 <Route path="/customers" element={<CustomersPage />} />
-                <Route path ="/signin" element={<SignIn />} />
+                <Route path ="/signin" element={<SignInPage />} />
                 <Route path ="/signup" element={<SignUpPage/>} />
               </Routes>
             </Flex>

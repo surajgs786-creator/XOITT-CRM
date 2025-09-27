@@ -7,3 +7,7 @@ export function capitalizedWord(str: string) {
     return match.toUpperCase();
   });
 }
+
+// Simple ID generator to replace heavy generateId library
+let idCounter = 0;
+export const generateId = () => `id_${++idCounter}_${Date.now()}`;

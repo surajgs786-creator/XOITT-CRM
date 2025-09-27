@@ -1,6 +1,6 @@
 //import node modules libraries
 
-import { v4 as uuid } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import {
   IconFiles,
   IconLayoutDashboard,
@@ -15,43 +15,42 @@ import {
 
 //import custom type
 import { MenuItemType } from '../types/menuTypes';
+import { generateId } from 'src/helper/utils';
 
 export const DashboardMenu: MenuItemType[] = [
   {
-    id: uuid(),
+    id: uuidv4(),
     title: 'Dashboard',
     link: '/',
     icon: <IconLayoutDashboard size={20} strokeWidth={1.5} />, 
   },
   {
-    id: uuid(),
+    id: uuidv4(),
     title: 'Sales',
     icon: <IconTargetArrow size={20} strokeWidth={1.5} />, 
     children: [
       {
-        id: uuid(),
+        id: uuidv4(),
         name: 'Leads',
         link: 'leads',
       },
       {
-        id: uuid(),
+        id: uuidv4(),
         name: 'Deals',
         link: 'deals',
       },
     ],
   },
   {
-    id: uuid(),
+    id: uuidv4(),
     title: 'Customers',
     icon: <IconUsers size={20} strokeWidth={1.5} />, 
     link: 'customers',
   },
-  // Ecommerce menu removed
-  // Blog menu removed
   {
-    id: uuid(),
+    id: uuidv4(),
     title: 'Auth',
-    link: '/sign-in',
+    link: 'signin',
     icon: <IconLock size={20} strokeWidth={1.5} />,
   },
 ];
