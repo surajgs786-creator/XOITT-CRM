@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f3f7;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: 600;
+      color: #1e2a78;
+      margin-bottom: 30px;
+    }
+
+    .kanban-container {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      padding-bottom: 20px;
+      scroll-behavior: smooth;
+    }
+
+    .kanban-column {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(69, 88, 157, 0.1);
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      max-height: 80vh;
+      border: 1px solid #e0e6f1;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .kanban-column:hover {
+      box-shadow: 0 14px 30px rgba(69, 88, 157, 0.2);
+    }
+
+    .column-header {
+      padding: 16px 20px;
+      font-size: 20px;
+      font-weight: 700;
+      border-bottom: 1px solid #e6eaf4;
+      background-color: #f9fbfd;
+      border-radius: 12px 12px 0 0;
+      color: #4a5adb;
+    }
+
+    .deal-cards {
+      flex-grow: 1;
+      overflow-y: auto;
+      padding: 16px 20px;
+    }
+
+    .deal-card {
+      background: linear-gradient(145deg, #e9f0ff, #d0dbff);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+      box-shadow: 4px 4px 8px #bec9fc, -4px -4px 8px #f4f7ff;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.3s ease;
+    }
+
+    .deal-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 6px 8px 16px rgba(74, 90, 219, 0.3);
+      background: linear-gradient(145deg, #c8d2ff, #a9baff);
+    }
+
+    .deal-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #2b3aab;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .deal-details {
+      font-size: 13px;
+      color: #555f8d;
+      line-height: 18px;
+    }
+
+    .assigned-to {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #7a84b8;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Modern Deal Kanban Board</h1>
+  <div class="kanban-container">
+    <div class="kanban-column">
+      <div class="column-header">New</div>
+      <div class="deal-cards">
+        <div class="deal-card">
+          <div class="deal-title">Deal A</div>
+          <div class="deal-details">
+            Customer: ABC Corp<br />Value: $12,000
+          </div>
+          <div class="assigned-to">Assigned To: Rajesh Kumar</div>
+        </div>
+        <div class="deal-card">
+          <div class="deal-title">Deal B</div>
+          <div class="deal-details">
+            Customer: XYZ Ltd<br />Value: $8,500
+          </div>
+          <div class="assigned-to">Assigned To: Priya Singh</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kanban-column">
+      <div class="column-header">In Progress</div>
+      <div class="deal-cards">
+        <div class="deal-card">
+          <div class="deal-title">Deal C</div>
+          <div class="deal-details">
+            Customer: LMN Inc<br />Value: $15,000
+          </div>
+          <div class="assigned-to">Assigned To: Deepak Nair</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kanban-column">
+      <div class="column-header">Delayed</div>
+      <div class="deal-cards">
+        <div class="deal-card">
+          <div class="deal-title">Deal F</div>
+          <div class="deal-details">
+            Customer: RST Ltd<br />Value: $9,000
+          </div>
+          <div class="assigned-to">Assigned To: Anjali Menon</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kanban-column">
+      <div class="column-header">Won</div>
+      <div class="deal-cards">
+        <div class="deal-card">
+          <div class="deal-title">Deal D</div>
+          <div class="deal-details">
+            Customer: DEF Corp<br />Value: $22,000
+          </div>
+          <div class="assigned-to">Assigned To: Suresh Babu</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kanban-column">
+      <div class="column-header">Lost</div>
+      <div class="deal-cards">
+        <div class="deal-card">
+          <div class="deal-title">Deal E</div>
+          <div class="deal-details">
+            Customer: PQR Ltd<br />Value: $6,000
+          </div>
+          <div class="assigned-to">Assigned To: Meera Thomas</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

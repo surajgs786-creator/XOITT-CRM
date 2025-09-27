@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DashboardPage from './pages/dashboard';
-import DealsContainer from './components/Deals/DealsContainer';
+import DealsPage from './pages/deals';
+import CustomersPage from './pages/customers';
 import './App.scss';
 import Sidebar from './layouts/Sidebar';
 import Header from './layouts/header/Header';
@@ -29,7 +30,8 @@ function App() {
                 <Route path="/leadDetails" element={<LeadDetails/>} />
                 <Route path="/leadDetails?action=Edit" element={<LeadDetails/>} />
                 <Route path="/leadDetails?action=View" element={<LeadDetails/>} />
-                <Route path="/deals" element={<DealsContainer />} />
+                <Route path="/deals" element={<DealsPage />} />
+                <Route path="/customers" element={<CustomersPage />} />
               </Routes>
             </Flex>
             

@@ -1,13 +1,16 @@
 //import node modules libraries
+
 import { v4 as uuid } from 'uuid';
 import {
   IconFiles,
+  IconLayoutDashboard,
   IconShoppingBag,
   IconNews,
   IconFile,
   IconLock,
   IconTarget,
   IconTargetArrow,
+  IconUsers,
 } from '@tabler/icons-react';
 
 //import custom type
@@ -18,12 +21,12 @@ export const DashboardMenu: MenuItemType[] = [
     id: uuid(),
     title: 'Dashboard',
     link: '/',
-    icon: <IconFiles size={20} strokeWidth={1.5} />,
+    icon: <IconLayoutDashboard size={20} strokeWidth={1.5} />, 
   },
   {
     id: uuid(),
     title: 'Sales',
-    icon: <IconTargetArrow size={20} strokeWidth={1.5} />,
+    icon: <IconTargetArrow size={20} strokeWidth={1.5} />, 
     children: [
       {
         id: uuid(),
@@ -32,15 +35,16 @@ export const DashboardMenu: MenuItemType[] = [
       },
       {
         id: uuid(),
-        name: 'Customers',
-        link: 'customers',
-      },
-      {
-        id: uuid(),
         name: 'Deals',
         link: 'deals',
       },
     ],
+  },
+  {
+    id: uuid(),
+    title: 'Customers',
+    icon: <IconUsers size={20} strokeWidth={1.5} />, 
+    link: 'customers',
   },
   // Ecommerce menu removed
   // Blog menu removed

@@ -83,10 +83,14 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
               );
             } else {
               if (menu.children) {
+                // Check if any child is active
+                const isDropdownActive = menu.children.some(
+                  (child) => location.pathname === `/${child.link}`
+                );
                 return (
                   <Fragment key={index}>
                     {/* Dropdown Parent Menu */}
-                    <CustomToggle eventKey={index.toString()} icon={menu.icon}>
+                    <CustomToggle eventKey={index.toString()} icon={menu.icon} className={isDropdownActive ? 'active' : ''}>
                       {menu.title}
                     </CustomToggle>
                     <Accordion.Collapse eventKey={index.toString()}>
@@ -245,7 +249,7 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                     <Link
                       to={menu.link ? `${menu.link}` : '#'}
                       className={`nav-link ${
-                        location.pathname === menu.link ? 'active' : ''
+                        location.pathname === `/${menu.link}` ? 'active' : ''
                       }`}
                     >
                       <span className="nav-icon">{menu.icon}</span>
