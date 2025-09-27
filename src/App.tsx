@@ -9,8 +9,11 @@ import Header from './layouts/header/Header';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import Flex from './components/common/Flex';
-import LeadContainer from './components/Leads/LeadsContainer';
-import LeadDetails from './components/Leads/LeadDetails';
+
+import SignIn from './pages/SignIn';
+import LeadPage from './pages/leads';
+import SignUpPage from './pages/signup';
+import LeadDetailsPage from './pages/leads/leadDetails';
 
 function App() {
   return (
@@ -26,12 +29,14 @@ function App() {
             <Routes>
                 <Route path="/dashboard" element={<DashboardPage />} />
                 <Route path="/" element={<DashboardPage/>} />
-                <Route path="/leads" element={<LeadContainer/>} />
-                <Route path="/leadDetails" element={<LeadDetails/>} />
-                <Route path="/leadDetails?action=Edit" element={<LeadDetails/>} />
-                <Route path="/leadDetails?action=View" element={<LeadDetails/>} />
+                <Route path="/leads" element={<LeadPage/>} />
+                <Route path="/leadDetails" element={<LeadDetailsPage/>} />
+                <Route path="/leadDetails?action=Edit" element={<LeadDetailsPage/>} />
+                <Route path="/leadDetails?action=View" element={<LeadDetailsPage/>} />
                 <Route path="/deals" element={<DealsPage />} />
                 <Route path="/customers" element={<CustomersPage />} />
+                <Route path ="/signin" element={<SignIn />} />
+                <Route path ="/signup" element={<SignUpPage/>} />
               </Routes>
             </Flex>
             
