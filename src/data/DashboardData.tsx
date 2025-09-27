@@ -261,15 +261,15 @@ export const EventList: EventType[] = [
     platform: 'Zoom',
   },
   {
-    title: 'Project Kickoff',
-    date: 'Jan 25, 2025',
-    time: '10:00 AM',
-    platform: 'Zoom',
+    title: 'Design Review',
+    date: 'Jan 28, 2025',
+    time: '2:00 PM',
+    platform: 'Google Meet',
   },
   {
-    title: 'Project Kickoff',
-    date: 'Jan 25, 2025',
-    time: '10:00 AM',
-    platform: 'Zoom',
+    title: 'Sprint Planning',
+    date: 'Feb 2, 2025',
+    time: '11:00 AM',
+    platform: 'Teams',
   },
 ];
