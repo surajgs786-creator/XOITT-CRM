@@ -36,7 +36,7 @@ export default function CustomToggle({
           e.preventDefault(); // Prevent default link behavior
           decoratedOnClick(e);
         }}
-        className={`dropdown-toggle ${isCurrentEventKey ? 'active' : ''}`}
+        className={`dropdown-toggle nav-link ${isCurrentEventKey ? 'active' : ''}`}
         data-bs-toggle="dropdown"
         aria-expanded={isCurrentEventKey}
       >
